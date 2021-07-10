@@ -1,0 +1,23 @@
+package com.fengzijk.springdemo;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+/**
+*-------------------------------------------------
+* <pre>功能描述:</pre>
+* @className  : SpringDemoApplication
+* @author : fengzijk
+* @email: guozhifengvip@gmail.com
+* @date : 2021/7/10 上午1:32
+*--------------------------------------------------
+*/
+@SpringBootApplication
+@MapperScan("com.fengzijk.springdemo.mapper")
+public class SpringDemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringDemoApplication.class, args);
+    }
+
+}

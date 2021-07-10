@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.2.11:3306/psmp?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    username : root
+    password : 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #redis
+  redis:
+    host: 192.168.2.11
+    port: 6444
+    timeout: 3000ms
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
