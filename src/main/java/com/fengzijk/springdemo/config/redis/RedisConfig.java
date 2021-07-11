@@ -111,7 +111,7 @@ public class RedisConfig {
     DistributedLocker distributedLocker(RedissonClient redissonSingle) {
         RedissonDistributedLocker locker = new RedissonDistributedLocker();
         locker.setRedissonClient(redissonSingle);
-        RedissLockUtil.setLocker(locker);
+        RedissonLockUtil.setLocker(locker);
         return locker;
     }
 }

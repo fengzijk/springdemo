@@ -3,7 +3,7 @@ package com.fengzijk.springdemo.controller;
 import com.fengzijk.springdemo.config.model.ResponseEntity;
 import com.fengzijk.springdemo.config.redis.RedisQueueHandle;
 import com.fengzijk.springdemo.config.redis.RedisUtil;
-import com.fengzijk.springdemo.config.redis.RedissLockUtil;
+import com.fengzijk.springdemo.config.redis.RedissonLockUtil;
 import com.fengzijk.springdemo.entity.IpWhiteList;
 import com.fengzijk.springdemo.service.IpWhiteListService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +35,11 @@ public class HomeController {
         redisUtil.set("xxx", "hhhhhhhhhhhhh");
 
         List<IpWhiteList> lists = whiteListService.get();
-        RedissLockUtil.lock("gzf", TimeUnit.SECONDS, 100);
+        RedissonLockUtil.lock("gzf", TimeUnit.SECONDS, 100);
 
         redisQueueHandle.put("gzf", "test");
         System.out.println(1111);
-        RedissLockUtil.unlock("gzf");
+        RedissonLockUtil.unlock("gzf");
         return new ResponseEntity<String>().ok().setdata("string");
     }
 

@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
  * @Time : 2019/3/23 10:57
  * --------------------------------------------------
  */
-public class RedissLockUtil {
+public class RedissonLockUtil {
         private static DistributedLocker redissLock;
 
         public static void setLocker(DistributedLocker locker) {
