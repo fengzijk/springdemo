@@ -14,7 +14,11 @@
     <name>springdemo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
+        <dockerHost>http://192.168.2.11:2375</dockerHost>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
         <fastjson.version>1.2.66</fastjson.version>
         <mysql-con-java.version>8.0.13</mysql-con-java.version>
         <mybatisplus.version>3.4.3.1</mybatisplus.version>
@@ -25,6 +29,15 @@
         <okhttp.version>3.3.1</okhttp.version>
         <redisson.version>3.10.5</redisson.version>
         <jasypt.version>3.0.3</jasypt.version>
+        <docker.private.server>http://192.168.2.11:8088</docker.private.server>
+
+
+
+
+
+
+
+
     </properties>
     <dependencies>
         <!-- springboot插件开始-->
@@ -49,13 +62,13 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-     <!--    amqp的支持
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-         amqp的支持
--->
+        <!--    amqp的支持
+           <dependency>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-starter-amqp</artifactId>
+           </dependency>
+            amqp的支持
+   -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
@@ -105,10 +118,6 @@
         </dependency>
 
         <!--mysql 数据库相关结束-->
-
-
-
-
 
 
         <!--其他工具  -->
@@ -188,22 +197,31 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>
-                    <addResources>true</addResources>
+                    <mainClass>com.fengzijk.springdemo.SpringDemoApplication</mainClass>
+                    <!--<executable>true</executable> -->
+                </configuration>
+
+
+            </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <imageName>fengzijk/${project.artifactId}</imageName>
+                    <dockerHost>${dockerHost}</dockerHost>
+                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
                 </configuration>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
+
 </project>
