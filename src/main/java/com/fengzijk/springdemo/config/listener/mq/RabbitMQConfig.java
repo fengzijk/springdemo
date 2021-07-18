@@ -1,4 +1,5 @@
-package com.fengzijk.springdemo.config.mq;
+/*
+package com.fengzijk.springdemo.config.listener.mq;
 
 
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
@@ -6,9 +7,9 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.RabbitListenerContainerFactory;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 
+*/
 /**
  * -------------------------------------------------
  * <pre>rabbit序列化</pre>
@@ -16,8 +17,9 @@ import org.springframework.context.annotation.Configuration;
  * @author : guozhifeng
  * @date : 2021/7/18 11:17
  * --------------------------------------------------
- */
-@Configuration
+ *//*
+
+//@Configuration
 public class RabbitMQConfig {
 
     @Bean
@@ -28,3 +30,4 @@ public class RabbitMQConfig {
         return factory;
     }
 }
+*/

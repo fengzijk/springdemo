@@ -1,4 +1,5 @@
-package com.fengzijk.springdemo.config.mq;
+/*
+package com.fengzijk.springdemo.config.listener.mq;
 
 import com.fengzijk.springdemo.util.JacksonUtil;
 import java.util.Map;
@@ -13,6 +14,7 @@ import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
 
+*/
 /**
  * -------------------------------------------------
  * <pre>mq 发送消息</pre>
@@ -20,7 +22,8 @@ import org.springframework.stereotype.Component;
  * @author : guozhifeng
  * @date : 2021/7/18 10:45
  * --------------------------------------------------
- */
+ *//*
+
 @Component
 @Slf4j
 public class RabbitProviderSender {
@@ -29,12 +32,14 @@ public class RabbitProviderSender {
     private RabbitTemplate rabbitTemplate;
 
 
-    /**
+    */
+/**
      * 对外发送消息的方法
      *
      * @param message 具体的消息内容
      * @param properties 额外的附加属性
-     */
+     *//*
+
     public void send(Object message, Map<String, Object> properties) {
 
         MessageHeaders mhs = new MessageHeaders(properties);
@@ -50,4 +55,4 @@ public class RabbitProviderSender {
         rabbitTemplate.convertAndSend("exchange-1", "springboot.rabbit", jsonMsg, mpp, correlationData);
 
     }
-}
+}*/

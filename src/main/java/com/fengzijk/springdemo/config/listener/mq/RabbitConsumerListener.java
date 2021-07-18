@@ -1,17 +1,13 @@
-package com.fengzijk.springdemo.config.mq;
+/*
+package com.fengzijk.springdemo.config.listener.mq;
 
 import com.rabbitmq.client.Channel;
 import java.util.Objects;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.annotation.Exchange;
-import org.springframework.amqp.rabbit.annotation.Queue;
-import org.springframework.amqp.rabbit.annotation.QueueBinding;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.messaging.Message;
-import org.springframework.stereotype.Component;
 
+*/
 /**
  * -------------------------------------------------
  * <pre>Rabbit 消息接收处理</pre>
@@ -19,24 +15,19 @@ import org.springframework.stereotype.Component;
  * @author : guozhifeng
  * @date : 2021/7/18 10:31
  * --------------------------------------------------
- */
-@Component
+ *//*
+
+//@Component
 @Slf4j
 public class RabbitConsumerListener {
 
-    /**
+    */
+/**
      * <pre>组合监听</pre>
-     */
-    @RabbitListener(
-      bindings = @QueueBinding(
-        value = @Queue(value = "queue-1", durable = "true"),
-        exchange = @Exchange(name = "exchange-1",
-          type = "topic",
-          ignoreDeclarationExceptions = "true"),
-        key = "springboot.*"
-      )
-    )
-    @RabbitHandler
+     *//*
+
+   // @RabbitListener(bindings = @QueueBinding(value = @Queue(value = "queue-1", durable = "true"),exchange = @Exchange(name = "exchange-1",type = "topic",ignoreDeclarationExceptions = "true"),key = "springboot.*"))
+    //@RabbitHandler
     public void onMessage(Message message, Channel channel) throws Exception {
 
 
@@ -48,8 +39,5 @@ public class RabbitConsumerListener {
             channel.basicAck(deliveryTag, false);
         }
     }
-
-
-
-
 }
+*/
