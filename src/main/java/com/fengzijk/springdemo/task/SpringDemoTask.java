@@ -4,7 +4,6 @@ import com.fengzijk.springdemo.config.redis.RedisKeyBuilder;
 import org.redisson.api.RQueue;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
@@ -17,7 +16,7 @@ public class SpringDemoTask {
 
         private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        @Scheduled(fixedRate = 1000)
+       // @Scheduled(fixedRate = 1000)
         public void reportCurrentTime() {
             System.out.println("NOW：" + sdf.format(new Date()));
             RQueue<String> queue = redissonClient

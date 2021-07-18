@@ -33,7 +33,7 @@ public class HomeController {
      * index
      */
     @GetMapping("/index")
-    public ResponseEntity<String> index() {
+    public ResponseEntity<List<IpWhiteList>> index() {
         redisUtil.set("xxx", "hhhhhhhhhhhhh");
 
         List<IpWhiteList> lists = whiteListService.get();
@@ -42,7 +42,7 @@ public class HomeController {
         redisQueueHandle.put("gzf", "test");
         System.out.println(1111);
         RedissonLockUtil.unlock("gzf");
-        return new ResponseEntity<String>().ok().setdata("string");
+        return new ResponseEntity<List<IpWhiteList>>().ok().setdata(lists);
     }
 
 }

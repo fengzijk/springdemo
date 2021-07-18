@@ -9,6 +9,7 @@ import com.fengzijk.springdemo.service.IpWhiteListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -20,7 +21,7 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
     @Override
     public List<IpWhiteList> get() {
         LambdaQueryWrapper<IpWhiteList> lambda3 = Wrappers.<IpWhiteList>lambdaQuery();
-        lambda3.ne(IpWhiteList::getStartIp,"111");
+        lambda3.ne(IpWhiteList::getCreateTime, LocalDateTime.now());
         return super.baseMapper.selectList(lambda3);
     }
 }

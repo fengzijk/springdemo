@@ -1,0 +1,113 @@
+2021-07-18 22:43:56.424  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10599 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
+2021-07-18 22:43:56.443  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-07-18 22:43:57.576  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-18 22:43:57.580  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-18 22:43:57.632  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2021-07-18 22:43:57.944  INFO 10599 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-07-18 22:43:57.963  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-18 22:43:57.964  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:43:57.965  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:43:57.965  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:43:58.000  INFO 10599 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-18 22:43:58.412  WARN 10599 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-07-18 22:43:58.431  INFO 10599 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-07-18 22:43:58.432  INFO 10599 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1864 ms
+2021-07-18 22:43:58.582  INFO 10599 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@f5b6e78 with name: encryptablePropertyResolver
+2021-07-18 22:43:58.721  INFO 10599 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-07-18 22:43:58.794  WARN 10599 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
+2021-07-18 22:43:58.976  INFO 10599 --- [redisson-netty-1-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:43:58.977  INFO 10599 --- [redisson-netty-1-19] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:43:59.394  INFO 10599 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-07-18 22:43:59.474  INFO 10599 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-18 22:44:00.351  INFO 10599 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-07-18 22:44:00.395  INFO 10599 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-07-18 22:44:00.402  INFO 10599 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-07-18 22:44:00.409  INFO 10599 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-07-18 22:44:00.446  INFO 10599 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-07-18 22:44:00.497  INFO 10599 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
+2021-07-18 22:44:00.515  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.866 seconds (JVM running for 5.457)
+2021-07-18 22:44:00.678  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-18 22:44:00.678  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-18 22:44:00.683  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-07-18 22:44:25.401  INFO 10599 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.8.Final
+2021-07-18 22:44:25.408  INFO 10599 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-07-18 22:44:25.413  INFO 10599 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-07-18 22:44:25.416  INFO 10599 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-07-18 22:44:30.634  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10617 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
+2021-07-18 22:44:30.639  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-07-18 22:44:31.439  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-18 22:44:31.441  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-18 22:44:31.460  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2021-07-18 22:44:31.656  INFO 10617 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-07-18 22:44:31.678  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-18 22:44:31.679  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:44:31.680  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:44:31.680  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:44:31.715  INFO 10617 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-18 22:44:32.064  WARN 10617 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-07-18 22:44:32.080  INFO 10617 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-07-18 22:44:32.080  INFO 10617 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1340 ms
+2021-07-18 22:44:32.200  INFO 10617 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@697a34af with name: encryptablePropertyResolver
+2021-07-18 22:44:32.308  INFO 10617 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-07-18 22:44:32.363  WARN 10617 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
+2021-07-18 22:44:32.516  INFO 10617 --- [redisson-netty-1-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:44:32.518  INFO 10617 --- [redisson-netty-1-19] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:44:32.833  INFO 10617 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-07-18 22:44:32.910  INFO 10617 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-18 22:44:33.589  INFO 10617 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-07-18 22:44:33.624  INFO 10617 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-07-18 22:44:33.628  INFO 10617 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-07-18 22:44:33.632  INFO 10617 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-07-18 22:44:33.654  INFO 10617 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-07-18 22:44:33.692  INFO 10617 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
+2021-07-18 22:44:33.708  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.819 seconds (JVM running for 4.4)
+2021-07-18 22:44:33.798  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-18 22:44:33.799  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-18 22:44:33.801  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-18 22:45:28.197  INFO 10617 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.8.Final
+2021-07-18 22:45:28.200  INFO 10617 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2021-07-18 22:45:28.203  INFO 10617 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-07-18 22:45:28.206  INFO 10617 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-07-18 22:46:25.617  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10647 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
+2021-07-18 22:46:25.620  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-07-18 22:46:26.358  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-07-18 22:46:26.359  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-07-18 22:46:26.376  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2021-07-18 22:46:26.562  INFO 10647 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-07-18 22:46:26.579  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-07-18 22:46:26.614  INFO 10647 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-07-18 22:46:26.869  WARN 10647 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-07-18 22:46:26.889  INFO 10647 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-07-18 22:46:26.890  INFO 10647 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
+2021-07-18 22:46:27.050  INFO 10647 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@48976e6d with name: encryptablePropertyResolver
+2021-07-18 22:46:27.157  INFO 10647 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-07-18 22:46:27.199  WARN 10647 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
+2021-07-18 22:46:27.329  INFO 10647 --- [redisson-netty-1-18] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:46:27.330  INFO 10647 --- [redisson-netty-1-19] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-07-18 22:46:27.626  INFO 10647 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-07-18 22:46:27.695  INFO 10647 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-07-18 22:46:28.335  INFO 10647 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-07-18 22:46:28.371  INFO 10647 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-07-18 22:46:28.376  INFO 10647 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-07-18 22:46:28.380  INFO 10647 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-07-18 22:46:28.401  INFO 10647 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-07-18 22:46:28.438  INFO 10647 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
+2021-07-18 22:46:28.452  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.186 seconds (JVM running for 3.674)
+2021-07-18 22:46:28.547  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-18 22:46:28.547  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-18 22:46:28.549  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

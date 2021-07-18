@@ -1,4 +1,4 @@
-package com.fengzijk.springdemo.utils;
+package com.fengzijk.springdemo.util;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.FatalBeanException;
