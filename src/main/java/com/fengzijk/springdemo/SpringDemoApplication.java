@@ -3,6 +3,8 @@ package com.fengzijk.springdemo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
 /**
 *-------------------------------------------------
 * <pre>功能描述:</pre>
@@ -14,6 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 */
 @SpringBootApplication
 @MapperScan("com.fengzijk.springdemo.mapper")
+@EnableScheduling
 public class SpringDemoApplication {
 
     public static void main(String[] args) {
