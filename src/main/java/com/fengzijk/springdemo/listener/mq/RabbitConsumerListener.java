@@ -1,5 +1,5 @@
 /*
-package com.fengzijk.springdemo.config.listener.mq;
+package com.fengzijk.springdemo.listener.mq;
 
 import com.rabbitmq.client.Channel;
 import java.util.Objects;
@@ -17,7 +17,7 @@ import org.springframework.messaging.Message;
  * --------------------------------------------------
  *//*
 
-//@Component
+//@Component很反感
 @Slf4j
 public class RabbitConsumerListener {
 
@@ -36,7 +36,7 @@ public class RabbitConsumerListener {
         //  2. 处理成功之后 获取deliveryTag 并进行手工的ACK操作, 因为我们配置文件里配置的是 手工签收 spring.rabbitmq.listener.simple.acknowledge-mode=manual
         Long deliveryTag = (Long) message.getHeaders().get(AmqpHeaders.DELIVERY_TAG);
         if (Objects.nonNull(deliveryTag)) {
-            channel.basicAck(deliveryTag, false);
+            channel.basicAck(deliveryTag, false)牛逼
         }
     }
 }

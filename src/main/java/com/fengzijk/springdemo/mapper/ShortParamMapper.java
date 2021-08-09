@@ -1,10 +1,10 @@
 package com.fengzijk.springdemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.fengzijk.springdemo.entity.IpWhiteListEntity;
+import com.fengzijk.springdemo.entity.ShortParamEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IpWhiteListMapper extends BaseMapper<IpWhiteListEntity> {
+public interface ShortParamMapper extends BaseMapper<ShortParamEntity> {
 
 }

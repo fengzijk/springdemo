@@ -34,8 +34,7 @@ public class JacksonUtil {
 
     public static String bean2Json(Object data) {
         try {
-            String result = mapper.writeValueAsString(data);
-            return result;
+            return mapper.writeValueAsString(data);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -57,8 +56,7 @@ public class JacksonUtil {
         JavaType javaType = mapper.getTypeFactory().constructParametricType(List.class, beanType);
 
         try {
-            List<T> resultList = mapper.readValue(jsonData, javaType);
-            return resultList;
+            return mapper.readValue(jsonData, javaType);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,8 +68,7 @@ public class JacksonUtil {
         JavaType javaType = mapper.getTypeFactory().constructMapType(Map.class, keyType, valueType);
 
         try {
-            Map<K, V> resultMap = mapper.readValue(jsonData, javaType);
-            return resultMap;
+            return mapper.readValue(jsonData, javaType);
         } catch (Exception e) {
             e.printStackTrace();
         }

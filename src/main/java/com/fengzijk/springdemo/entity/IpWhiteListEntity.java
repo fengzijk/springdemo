@@ -3,21 +3,28 @@ package com.fengzijk.springdemo.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 import lombok.experimental.FieldNameConstants;
 
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
- * ip_white_list
- */
-@TableName("ip_white_list")
+*-------------------------------------------------
+* <pre>功能描述</pre>
+* @className  : IpWhiteList
+* @author : fengzijk
+* @email: guozhifengvip@gmail.com
+* @date : 2021/8/9 下午5:57
+*--------------------------------------------------
+*/
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
 @FieldNameConstants
-public class IpWhiteList implements Serializable {
+@TableName("ip_white_list")
+public class IpWhiteListEntity extends BaseEntity implements Serializable {
     /**
      * 主键
      */
@@ -46,18 +53,6 @@ public class IpWhiteList implements Serializable {
     @NotEmpty
     @TableField("end_ip")
     private String endIp;
-
-    /**
-     * 创建时间
-     */
-    @TableField("create_time")
-    private LocalDateTime createTime;
-
-    /**
-     * 更新时间
-     */
-    @TableField("update_time")
-    private LocalDateTime updateTime;
 
     private static final long serialVersionUID = 1L;
 }

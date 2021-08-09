@@ -1,5 +1,5 @@
 /*
-package com.fengzijk.springdemo.config.listener.mq;
+package com.fengzijk.springdemo.listener.mq;
 
 
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;

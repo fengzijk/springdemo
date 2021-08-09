@@ -1,5 +1,5 @@
 /*
-package com.fengzijk.springdemo.config.listener.mq;
+package com.fengzijk.springdemo.listener.mq;
 
 import com.fengzijk.springdemo.util.JacksonUtil;
 import java.util.Map;
