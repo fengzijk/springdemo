@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 public class DateUtil {
 
-    public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+    public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
     public static final String DATE_PATTERN = "yyyy-MM-dd";
     public static final String DATE_PATTERN_YYYYMMDD = "yyyyMMdd";
     public static final String DATE_PATTERN_YYYYMMDDHHMMSS = "yyyyMMddHHmmss";

@@ -1,6 +1,5 @@
 package com.fengzijk.springdemo.service.impl;
 
-import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -69,7 +68,7 @@ public class ShortParamServiceImpl extends ServiceImpl<ShortParamMapper, ShortPa
             redisKey = BaseConstant.REDIS_SHORT_URL_KEY + md5Code;
         }
         if (redisUtil.existsKey(redisKey)) {
-            return (ShortParamEntity) JSONObject.parse(redisUtil.get(redisKey).toString());
+            return (ShortParamEntity)redisUtil.get(redisKey);
         }
 
 
