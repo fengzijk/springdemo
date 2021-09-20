@@ -17,7 +17,6 @@ import java.io.Serializable;
 /**
 *-------------------------------------------------
 * <pre>功能描述:</pre>
-* @className  : ShortParam
 * @author : fengzijk
 * @email: guozhifengvip@gmail.com
 * @date : 2021/8/9 下午6:51

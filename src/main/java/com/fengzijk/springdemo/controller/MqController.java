@@ -17,24 +17,6 @@ public class MqController {
 
     @Autowired
     private RedisQueueHandle redisQueueHandle;
-
-/*    @Autowired
-    private RabbitProviderSender rabbitProviderSender;
-
-
-
-    *//**
-     * index
-     *//*
-    @GetMapping("/rabbit")
-    public ResponseEntity<String> rabbitTest() {
-        String  ss="{gzf:\"1212123\"}";
-        rabbitProviderSender.send(ss,null);
-        return new ResponseEntity<String>().ok();
-    }*/
-    /**
-     * index
-     */
     @GetMapping("/redis/")
     public ResponseEntity<String> index() {
 

@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
 *-------------------------------------------------
 * <pre>功能描述:</pre>
-* @className  : SpringDemoApplication
 * @author : fengzijk
 * @email: guozhifengvip@gmail.com
 * @date : 2021/7/10 上午1:32

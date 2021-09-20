@@ -1,10 +1,12 @@
 package com.fengzijk.springdemo.intercepter;
 
+
 import com.fengzijk.springdemo.entity.dto.BaseUserInfoDTO;
+
 /**
 *-------------------------------------------------
 * <pre>用户基础新封装</pre>
-* @className  : UserHolder
+
 * @author : fengzijk
 * @email: guozhifengvip@gmail.com
 * @date : 2021/8/9 下午6:05
