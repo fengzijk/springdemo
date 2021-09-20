@@ -36,8 +36,6 @@ public interface DistributedLocker {
      *
      * @param lockKey redis的key
      * @return RLock  返回 com.fengzijk.redisson.redlock对象
-     * @description :只带redisKey的锁 不带超时
-     * @methodName :lock
      * @author : fengzijk
      * @date : 2019/4/24 13:52
      */

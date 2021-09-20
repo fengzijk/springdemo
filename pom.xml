@@ -29,6 +29,7 @@
         <okhttp.version>3.3.1</okhttp.version>
         <redisson.version>3.10.5</redisson.version>
         <jasypt.version>3.0.3</jasypt.version>
+        <model.mapper.version>2.4.4</model.mapper.version>
         <docker.private.server>http://192.168.2.11:8088</docker.private.server>
 
 
@@ -144,6 +145,13 @@
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>${commons-collections.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${model.mapper.version}</version>
         </dependency>
 
 
