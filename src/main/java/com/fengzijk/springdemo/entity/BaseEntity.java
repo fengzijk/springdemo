@@ -20,6 +20,7 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 public class BaseEntity implements Serializable {
 
+    private static final long serialVersionUID = -9039853980855787753L;
     /**
      * 创建人ID
      */

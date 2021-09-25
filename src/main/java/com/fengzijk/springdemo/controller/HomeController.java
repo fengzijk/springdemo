@@ -6,8 +6,10 @@ import com.fengzijk.springdemo.config.redis.RedisUtil;
 import com.fengzijk.springdemo.config.redis.RedissonLockUtil;
 import com.fengzijk.springdemo.entity.IpWhiteListEntity;
 import com.fengzijk.springdemo.entity.ShortParamEntity;
+import com.fengzijk.springdemo.entity.dto.ShortParamDTO;
 import com.fengzijk.springdemo.service.IShortParamService;
 import com.fengzijk.springdemo.service.IpWhiteListService;
+import com.fengzijk.springdemo.util.modelmapper.ModelMapperUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -54,8 +56,13 @@ public class HomeController {
      * index
      */
     @GetMapping("/test/{param}")
-    public ResponseEntity<ShortParamEntity> testShort(@PathVariable(value = "param")String param) {
-        return new ResponseEntity<ShortParamEntity>().ok().setdata(shortParamService.longToShort("param",param));
+    public ResponseEntity<ShortParamDTO> testShort(@PathVariable(value = "param")String param) {
+         ShortParamEntity param1 = shortParamService.longToShort(
+                "param",
+                param);
+         param1.setOriginalParam(null);
+        ShortParamDTO map = ModelMapperUtil.map(param1, ShortParamDTO.class);
+        return new ResponseEntity<ShortParamDTO>().ok().setdata(map);
     }
 
 }
