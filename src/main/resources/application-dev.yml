@@ -27,6 +27,9 @@ spring:
         max-idle: 8
         min-idle: 0
         max-wait: -1ms
+
+
+        
 #  #rabbitmq配置
 #  rabbitmq:
 #    host: 192.168.2.11
