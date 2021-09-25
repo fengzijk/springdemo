@@ -3,7 +3,7 @@ package com.fengzijk.springdemo.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fengzijk.springdemo.entity.IpWhiteListEntity;
+import com.fengzijk.springdemo.pojo.entity.IpWhiteListEntity;
 import com.fengzijk.springdemo.mapper.IpWhiteListMapper;
 import com.fengzijk.springdemo.service.IpWhiteListService;
 import org.springframework.beans.factory.annotation.Autowired;

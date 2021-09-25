@@ -22,7 +22,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
-
+/**
+*-------------------------------------------------
+* <pre>rest</pre>
+* @author : guozhifeng
+* @date : 2021/9/25 10:58
+*--------------------------------------------------
+*/
 @Configuration
 public class RestTemplateConfig {
 

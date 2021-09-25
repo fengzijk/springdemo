@@ -1,6 +1,6 @@
 package com.fengzijk.springdemo.service;
 
-import com.fengzijk.springdemo.entity.ShortParamEntity;
+import com.fengzijk.springdemo.pojo.entity.ShortParamEntity;
 
 /**
  * -------------------------------------------------

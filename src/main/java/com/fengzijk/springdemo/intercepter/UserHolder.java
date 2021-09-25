@@ -1,7 +1,7 @@
 package com.fengzijk.springdemo.intercepter;
 
 
-import com.fengzijk.springdemo.entity.dto.BaseUserInfoDTO;
+import com.fengzijk.springdemo.pojo.dto.BaseUserInfoDTO;
 
 /**
 *-------------------------------------------------

@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fengzijk.springdemo.config.constant.BaseConstant;
 import com.fengzijk.springdemo.config.redis.RedisUtil;
-import com.fengzijk.springdemo.entity.ShortParamEntity;
+import com.fengzijk.springdemo.pojo.entity.ShortParamEntity;
 import com.fengzijk.springdemo.mapper.ShortParamMapper;
 import com.fengzijk.springdemo.service.IShortParamService;
 import com.fengzijk.springdemo.util.ShortUtils;

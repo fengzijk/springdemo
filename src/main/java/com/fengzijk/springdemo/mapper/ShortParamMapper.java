@@ -1,7 +1,7 @@
 package com.fengzijk.springdemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.fengzijk.springdemo.entity.ShortParamEntity;
+import com.fengzijk.springdemo.pojo.entity.ShortParamEntity;
 import org.springframework.stereotype.Repository;
 /**
 *-------------------------------------------------

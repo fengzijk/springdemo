@@ -1,4 +1,4 @@
-package com.fengzijk.springdemo.entity;
+package com.fengzijk.springdemo.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

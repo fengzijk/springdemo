@@ -1,7 +1,7 @@
 package com.fengzijk.springdemo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.fengzijk.springdemo.entity.IpWhiteListEntity;
+import com.fengzijk.springdemo.pojo.entity.IpWhiteListEntity;
 
 import java.util.List;
 

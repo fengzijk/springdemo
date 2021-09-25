@@ -1,113 +1,1309 @@
-2021-07-18 22:43:56.424  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10599 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
-2021-07-18 22:43:56.443  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
-2021-07-18 22:43:57.576  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-18 22:43:57.580  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-18 22:43:57.632  INFO 10599 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2021-07-18 22:43:57.944  INFO 10599 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
-2021-07-18 22:43:57.963  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2021-07-18 22:43:57.964  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:43:57.965  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:43:57.965  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
-2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:43:57.966  INFO 10599 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:43:58.000  INFO 10599 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2021-07-18 22:43:58.412  WARN 10599 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-07-18 22:43:58.431  INFO 10599 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-07-18 22:43:58.432  INFO 10599 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1864 ms
-2021-07-18 22:43:58.582  INFO 10599 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@f5b6e78 with name: encryptablePropertyResolver
-2021-07-18 22:43:58.721  INFO 10599 --- [main] org.redisson.Version                     : Redisson 3.10.5
-2021-07-18 22:43:58.794  WARN 10599 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
-2021-07-18 22:43:58.976  INFO 10599 --- [redisson-netty-1-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:43:58.977  INFO 10599 --- [redisson-netty-1-19] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:43:59.394  INFO 10599 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-07-18 22:43:59.474  INFO 10599 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-18 22:44:00.351  INFO 10599 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2021-07-18 22:44:00.395  INFO 10599 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
-2021-07-18 22:44:00.402  INFO 10599 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
-2021-07-18 22:44:00.409  INFO 10599 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
-2021-07-18 22:44:00.446  INFO 10599 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-2021-07-18 22:44:00.497  INFO 10599 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
-2021-07-18 22:44:00.515  INFO 10599 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.866 seconds (JVM running for 5.457)
-2021-07-18 22:44:00.678  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-18 22:44:00.678  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-18 22:44:00.683  INFO 10599 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-07-18 22:44:25.401  INFO 10599 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.8.Final
-2021-07-18 22:44:25.408  INFO 10599 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2021-07-18 22:44:25.413  INFO 10599 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-07-18 22:44:25.416  INFO 10599 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-07-18 22:44:30.634  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10617 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
-2021-07-18 22:44:30.639  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
-2021-07-18 22:44:31.439  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-18 22:44:31.441  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-18 22:44:31.460  INFO 10617 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2021-07-18 22:44:31.656  INFO 10617 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
-2021-07-18 22:44:31.678  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2021-07-18 22:44:31.679  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:44:31.680  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:44:31.680  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
-2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:44:31.681  INFO 10617 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:44:31.715  INFO 10617 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2021-07-18 22:44:32.064  WARN 10617 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-07-18 22:44:32.080  INFO 10617 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-07-18 22:44:32.080  INFO 10617 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1340 ms
-2021-07-18 22:44:32.200  INFO 10617 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@697a34af with name: encryptablePropertyResolver
-2021-07-18 22:44:32.308  INFO 10617 --- [main] org.redisson.Version                     : Redisson 3.10.5
-2021-07-18 22:44:32.363  WARN 10617 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
-2021-07-18 22:44:32.516  INFO 10617 --- [redisson-netty-1-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:44:32.518  INFO 10617 --- [redisson-netty-1-19] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:44:32.833  INFO 10617 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-07-18 22:44:32.910  INFO 10617 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-18 22:44:33.589  INFO 10617 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2021-07-18 22:44:33.624  INFO 10617 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
-2021-07-18 22:44:33.628  INFO 10617 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
-2021-07-18 22:44:33.632  INFO 10617 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
-2021-07-18 22:44:33.654  INFO 10617 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-2021-07-18 22:44:33.692  INFO 10617 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
-2021-07-18 22:44:33.708  INFO 10617 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.819 seconds (JVM running for 4.4)
-2021-07-18 22:44:33.798  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-18 22:44:33.799  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-18 22:44:33.801  INFO 10617 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-07-18 22:45:28.197  INFO 10617 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.8.Final
-2021-07-18 22:45:28.200  INFO 10617 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2021-07-18 22:45:28.203  INFO 10617 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-07-18 22:45:28.206  INFO 10617 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-07-18 22:46:25.617  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_211 on guozhifengdeMacBook-Pro.local with PID 10647 (/Users/fengzi/IdeaProjects/springdemo/target/classes started by fengzi in /Users/fengzi/IdeaProjects/springdemo)
-2021-07-18 22:46:25.620  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
-2021-07-18 22:46:26.358  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-07-18 22:46:26.359  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-07-18 22:46:26.376  INFO 10647 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2021-07-18 22:46:26.562  INFO 10647 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
-2021-07-18 22:46:26.579  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:46:26.581  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
-2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:46:26.582  INFO 10647 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2021-07-18 22:46:26.614  INFO 10647 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2021-07-18 22:46:26.869  WARN 10647 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-07-18 22:46:26.889  INFO 10647 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-07-18 22:46:26.890  INFO 10647 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
-2021-07-18 22:46:27.050  INFO 10647 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Found Custom Resolver Bean com.fengzijk.springdemo.config.EncryptionPropertyConfig$EncryptionPropertyResolver@48976e6d with name: encryptablePropertyResolver
-2021-07-18 22:46:27.157  INFO 10647 --- [main] org.redisson.Version                     : Redisson 3.10.5
-2021-07-18 22:46:27.199  WARN 10647 --- [main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
-2021-07-18 22:46:27.329  INFO 10647 --- [redisson-netty-1-18] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:46:27.330  INFO 10647 --- [redisson-netty-1-19] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
-2021-07-18 22:46:27.626  INFO 10647 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2021-07-18 22:46:27.695  INFO 10647 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-07-18 22:46:28.335  INFO 10647 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2021-07-18 22:46:28.371  INFO 10647 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
-2021-07-18 22:46:28.376  INFO 10647 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
-2021-07-18 22:46:28.380  INFO 10647 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
-2021-07-18 22:46:28.401  INFO 10647 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-2021-07-18 22:46:28.438  INFO 10647 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 10009 (http)
-2021-07-18 22:46:28.452  INFO 10647 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.186 seconds (JVM running for 3.674)
-2021-07-18 22:46:28.547  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-18 22:46:28.547  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-18 22:46:28.549  INFO 10647 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-25 10:55:24.011  INFO 14496 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 14496 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 10:55:24.018  INFO 14496 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 10:55:25.050  INFO 14496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 10:55:25.052  INFO 14496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 10:55:25.097  INFO 14496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-09-25 10:55:25.303  INFO 14496 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 10:55:25.318  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 10:55:25.319  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 10:55:25.319  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 10:55:25.320  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 10:55:25.320  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 10:55:25.320  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 10:55:25.320  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 10:55:25.320  INFO 14496 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 10:55:25.348  INFO 14496 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 10:55:25.655  WARN 14496 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 10:55:25.668  INFO 14496 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 10:55:25.668  INFO 14496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1586 ms
+2021-09-25 10:55:25.791  INFO 14496 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 10:55:25.792  INFO 14496 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 10:55:25.935  INFO 14496 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 10:55:26.551  INFO 14496 --- [redisson-netty-1-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 10:55:26.551  INFO 14496 --- [redisson-netty-1-12] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 10:55:26.886  INFO 14496 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 10:55:27.045  INFO 14496 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 10:55:27.999  INFO 14496 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 10:55:28.073  INFO 14496 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 10:55:28.085  INFO 14496 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 10:55:28.090  INFO 14496 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 10:55:28.110  INFO 14496 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 10:55:28.161  INFO 14496 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 10:55:28.173  INFO 14496 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.625 seconds (JVM running for 5.437)
+2021-09-25 10:55:28.536  INFO 14496 --- [RMI TCP Connection(3)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 10:55:28.536  INFO 14496 --- [RMI TCP Connection(3)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 10:55:28.537  INFO 14496 --- [RMI TCP Connection(3)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:12:56.322  INFO 7360 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 7360 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:12:56.324  INFO 7360 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:12:57.042  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:12:57.042  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:12:57.054  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:12:57.059  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:12:57.059  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:12:57.068  INFO 7360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:12:57.213  INFO 7360 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:12:57.227  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:12:57.228  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:12:57.228  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:12:57.229  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:12:57.229  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:12:57.229  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:12:57.229  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:12:57.229  INFO 7360 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:12:57.257  INFO 7360 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:12:57.513  WARN 7360 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:12:57.525  INFO 7360 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:12:57.525  INFO 7360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
+2021-09-25 11:12:57.623  INFO 7360 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:12:57.624  INFO 7360 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:12:57.711  INFO 7360 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:12:58.256  INFO 7360 --- [redisson-netty-1-13] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:12:58.256  INFO 7360 --- [redisson-netty-1-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:12:58.455  INFO 7360 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:12:58.513  INFO 7360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:12:59.002  INFO 7360 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:12:59.031  INFO 7360 --- [cluster-ClusterId{value='614e93bb86963c63ef252de6', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:9}] to 192.168.2.11:27017
+2021-09-25 11:12:59.032  INFO 7360 --- [cluster-rtt-ClusterId{value='614e93bb86963c63ef252de6', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to 192.168.2.11:27017
+2021-09-25 11:12:59.032  INFO 7360 --- [cluster-ClusterId{value='614e93bb86963c63ef252de6', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10834000}
+2021-09-25 11:12:59.949  INFO 7360 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:13:00.001  INFO 7360 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:13:00.005  INFO 7360 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:13:00.009  INFO 7360 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:13:00.025  INFO 7360 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:13:00.051  INFO 7360 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:13:00.064  INFO 7360 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.057 seconds (JVM running for 4.659)
+2021-09-25 11:13:00.210  INFO 7360 --- [RMI TCP Connection(1)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:13:00.210  INFO 7360 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:13:00.212  INFO 7360 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-25 11:13:00.465  INFO 7360 --- [RMI TCP Connection(3)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:13:04.480  WARN 7360 --- [RMI TCP Connection(3)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 11:13:04.791  INFO 7360 --- [RMI TCP Connection(3)-192.168.2.145] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3}] to 192.168.2.11:27017 because there was a socket exception raised by this connection.
+2021-09-25 11:13:04.794  WARN 7360 --- [RMI TCP Connection(3)-192.168.2.145] o.s.b.a.mongo.MongoHealthIndicator       : MongoDB health check failed
+
+org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:140)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2899)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:528)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeCommand(MongoTemplate.java:444)
+	at org.springframework.boot.actuate.mongo.MongoHealthIndicator.doHealthCheck(MongoHealthIndicator.java:46)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}
+	at com.mongodb.internal.connection.SaslAuthenticator.wrapException(SaslAuthenticator.java:271)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:85)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:278)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:53)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:168)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:63)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:51)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:431)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:115)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:100)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:96)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:123)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:135)
+	at com.mongodb.internal.operation.CommandOperationHelper$5.call(CommandOperationHelper.java:209)
+	at com.mongodb.internal.operation.OperationHelper.withReadConnectionSource(OperationHelper.java:583)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:205)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:200)
+	at com.mongodb.internal.operation.CommandReadOperation.execute(CommandReadOperation.java:58)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170)
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$executeCommand$2(MongoTemplate.java:444)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:526)
+	... 45 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 17 (ProtocolError): 'Attempt to switch database target during SASL authentication.' on server 192.168.2.11:27017. The full response is {"ok": 0.0, "errmsg": "Attempt to switch database target during SASL authentication.", "code": 17, "codeName": "ProtocolError"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:175)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:358)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:279)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:231)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:47)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:74)
+	... 70 common frames omitted
+
+2021-09-25 11:14:10.334  INFO 3104 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 3104 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:14:10.336  INFO 3104 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:14:10.924  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:14:10.925  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:14:10.935  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:14:10.941  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:14:10.941  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:14:10.951  INFO 3104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:14:11.096  INFO 3104 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:14:11.110  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:14:11.111  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:14:11.111  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:14:11.112  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:14:11.112  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:14:11.112  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:14:11.112  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:14:11.113  INFO 3104 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:14:11.142  INFO 3104 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:14:11.402  WARN 3104 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:14:11.413  INFO 3104 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:14:11.414  INFO 3104 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
+2021-09-25 11:14:11.513  INFO 3104 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:14:11.515  INFO 3104 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:14:11.603  INFO 3104 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:14:12.148  INFO 3104 --- [redisson-netty-1-11] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:14:12.148  INFO 3104 --- [redisson-netty-1-18] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:14:12.359  INFO 3104 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:14:12.416  INFO 3104 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:14:12.901  INFO 3104 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:14:12.930  INFO 3104 --- [cluster-ClusterId{value='614e9404e0ca4f0bcabc0fd3', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:15}] to 192.168.2.11:27017
+2021-09-25 11:14:12.930  INFO 3104 --- [cluster-rtt-ClusterId{value='614e9404e0ca4f0bcabc0fd3', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:14}] to 192.168.2.11:27017
+2021-09-25 11:14:12.930  INFO 3104 --- [cluster-ClusterId{value='614e9404e0ca4f0bcabc0fd3', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10644600}
+2021-09-25 11:14:13.825  INFO 3104 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:14:13.878  INFO 3104 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:14:13.882  INFO 3104 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:14:13.885  INFO 3104 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:14:13.901  INFO 3104 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:14:13.929  INFO 3104 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:14:13.942  INFO 3104 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.989 seconds (JVM running for 4.667)
+2021-09-25 11:14:14.186  INFO 3104 --- [RMI TCP Connection(1)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:14:14.187  INFO 3104 --- [RMI TCP Connection(2)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:14:14.187  INFO 3104 --- [RMI TCP Connection(2)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:14:14.189  INFO 3104 --- [RMI TCP Connection(2)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-25 11:14:18.200  WARN 3104 --- [RMI TCP Connection(1)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 11:14:18.344  INFO 3104 --- [RMI TCP Connection(1)-192.168.2.145] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3}] to 192.168.2.11:27017 because there was a socket exception raised by this connection.
+2021-09-25 11:14:18.346  WARN 3104 --- [RMI TCP Connection(1)-192.168.2.145] o.s.b.a.mongo.MongoHealthIndicator       : MongoDB health check failed
+
+org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:140)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2899)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:528)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeCommand(MongoTemplate.java:444)
+	at org.springframework.boot.actuate.mongo.MongoHealthIndicator.doHealthCheck(MongoHealthIndicator.java:46)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='root', source='test', password=<hidden>, mechanismProperties=<hidden>}
+	at com.mongodb.internal.connection.SaslAuthenticator.wrapException(SaslAuthenticator.java:271)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:85)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:278)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:53)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:168)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:63)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:51)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:431)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:115)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:100)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:96)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:123)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:135)
+	at com.mongodb.internal.operation.CommandOperationHelper$5.call(CommandOperationHelper.java:209)
+	at com.mongodb.internal.operation.OperationHelper.withReadConnectionSource(OperationHelper.java:583)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:205)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:200)
+	at com.mongodb.internal.operation.CommandReadOperation.execute(CommandReadOperation.java:58)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170)
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$executeCommand$2(MongoTemplate.java:444)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:526)
+	... 45 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 17 (ProtocolError): 'Attempt to switch database target during SASL authentication.' on server 192.168.2.11:27017. The full response is {"ok": 0.0, "errmsg": "Attempt to switch database target during SASL authentication.", "code": 17, "codeName": "ProtocolError"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:175)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:358)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:279)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:231)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:47)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:74)
+	... 70 common frames omitted
+
+2021-09-25 11:16:29.089  INFO 26032 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 26032 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:16:29.092  INFO 26032 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:16:29.680  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:16:29.681  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:16:29.692  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:16:29.697  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:16:29.698  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:16:29.707  INFO 26032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:16:29.852  INFO 26032 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:16:29.865  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:16:29.865  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:16:29.866  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:16:29.866  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:16:29.866  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:16:29.866  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:16:29.866  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:16:29.867  INFO 26032 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:16:29.894  INFO 26032 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:16:30.149  WARN 26032 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:16:30.161  INFO 26032 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:16:30.161  INFO 26032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1036 ms
+2021-09-25 11:16:30.259  INFO 26032 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:16:30.260  INFO 26032 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:16:30.348  INFO 26032 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:16:30.888  INFO 26032 --- [redisson-netty-1-11] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:16:30.888  INFO 26032 --- [redisson-netty-1-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:16:31.089  INFO 26032 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:16:31.147  INFO 26032 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:16:31.633  INFO 26032 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:16:31.661  INFO 26032 --- [cluster-rtt-ClusterId{value='614e948fb1bf604a39fb9899', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:17}] to 192.168.2.11:27017
+2021-09-25 11:16:31.661  INFO 26032 --- [cluster-ClusterId{value='614e948fb1bf604a39fb9899', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:18}] to 192.168.2.11:27017
+2021-09-25 11:16:31.662  INFO 26032 --- [cluster-ClusterId{value='614e948fb1bf604a39fb9899', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11034500}
+2021-09-25 11:16:32.537  INFO 26032 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:16:32.588  INFO 26032 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:16:32.592  INFO 26032 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:16:32.595  INFO 26032 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:16:32.610  INFO 26032 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:16:32.637  INFO 26032 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:16:32.649  INFO 26032 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.872 seconds (JVM running for 4.471)
+2021-09-25 11:16:33.067  INFO 26032 --- [RMI TCP Connection(2)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:16:33.069  INFO 26032 --- [RMI TCP Connection(1)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:16:33.069  INFO 26032 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:16:33.070  INFO 26032 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:16:37.077  WARN 26032 --- [RMI TCP Connection(2)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 11:16:37.222  INFO 26032 --- [RMI TCP Connection(2)-192.168.2.145] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:19}] to 192.168.2.11:27017
+2021-09-25 11:17:02.805  INFO 16460 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 16460 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:17:02.807  INFO 16460 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:17:03.415  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:17:03.416  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:17:03.427  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:17:03.432  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:17:03.433  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:17:03.443  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:17:03.594  INFO 16460 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:17:03.608  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:17:03.609  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:17:03.609  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:17:03.610  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:17:03.610  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:17:03.610  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:17:03.610  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:17:03.610  INFO 16460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:17:03.638  INFO 16460 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:17:03.896  WARN 16460 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:17:03.907  INFO 16460 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:17:03.907  INFO 16460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1066 ms
+2021-09-25 11:17:04.004  INFO 16460 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:17:04.006  INFO 16460 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:17:04.092  INFO 16460 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:17:04.641  INFO 16460 --- [redisson-netty-1-16] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:17:04.642  INFO 16460 --- [redisson-netty-1-11] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:17:04.850  INFO 16460 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:17:04.907  INFO 16460 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:17:05.404  INFO 16460 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:17:05.433  INFO 16460 --- [cluster-ClusterId{value='614e94b1519533603f587184', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:20}] to 192.168.2.11:27017
+2021-09-25 11:17:05.433  INFO 16460 --- [cluster-rtt-ClusterId{value='614e94b1519533603f587184', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:21}] to 192.168.2.11:27017
+2021-09-25 11:17:05.433  INFO 16460 --- [cluster-ClusterId{value='614e94b1519533603f587184', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11164400}
+2021-09-25 11:17:06.303  INFO 16460 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:17:06.355  INFO 16460 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:17:06.359  INFO 16460 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:17:06.362  INFO 16460 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:17:06.378  INFO 16460 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:17:06.404  INFO 16460 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:17:06.417  INFO 16460 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.951 seconds (JVM running for 4.554)
+2021-09-25 11:17:07.001  INFO 16460 --- [RMI TCP Connection(4)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:17:07.003  INFO 16460 --- [RMI TCP Connection(3)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:17:07.003  INFO 16460 --- [RMI TCP Connection(3)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:17:07.004  INFO 16460 --- [RMI TCP Connection(3)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:17:11.010  WARN 16460 --- [RMI TCP Connection(4)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 11:17:11.140  INFO 16460 --- [RMI TCP Connection(4)-192.168.2.145] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3}] to 192.168.2.11:27017 because there was a socket exception raised by this connection.
+2021-09-25 11:17:11.142  WARN 16460 --- [RMI TCP Connection(4)-192.168.2.145] o.s.b.a.mongo.MongoHealthIndicator       : MongoDB health check failed
+
+org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='root', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='root', password=<hidden>, mechanismProperties=<hidden>}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:140)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2899)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:528)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeCommand(MongoTemplate.java:444)
+	at org.springframework.boot.actuate.mongo.MongoHealthIndicator.doHealthCheck(MongoHealthIndicator.java:46)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-1, userName='root', source='root', password=<hidden>, mechanismProperties=<hidden>}
+	at com.mongodb.internal.connection.SaslAuthenticator.wrapException(SaslAuthenticator.java:271)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:85)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:278)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:56)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:168)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:63)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:144)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:51)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:431)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:115)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:100)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:96)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:123)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:135)
+	at com.mongodb.internal.operation.CommandOperationHelper$5.call(CommandOperationHelper.java:209)
+	at com.mongodb.internal.operation.OperationHelper.withReadConnectionSource(OperationHelper.java:583)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:205)
+	at com.mongodb.internal.operation.CommandOperationHelper.executeCommand(CommandOperationHelper.java:200)
+	at com.mongodb.internal.operation.CommandReadOperation.execute(CommandReadOperation.java:58)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170)
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$executeCommand$2(MongoTemplate.java:444)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:526)
+	... 45 common frames omitted
+Caused by: com.mongodb.MongoCommandException: Command failed with error 17 (ProtocolError): 'Attempt to switch database target during SASL authentication.' on server 192.168.2.11:27017. The full response is {"ok": 0.0, "errmsg": "Attempt to switch database target during SASL authentication.", "code": 17, "codeName": "ProtocolError"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:175)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:358)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:279)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:83)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:33)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:231)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:47)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:74)
+	... 69 common frames omitted
+
+2021-09-25 11:31:15.434  INFO 24308 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 24308 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:31:15.436  INFO 24308 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:31:16.047  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:31:16.047  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:31:16.059  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:31:16.064  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:31:16.064  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:31:16.073  INFO 24308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:31:16.220  INFO 24308 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:31:16.233  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:31:16.234  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:31:16.234  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:31:16.234  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:31:16.235  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:31:16.235  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:31:16.235  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:31:16.235  INFO 24308 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:31:16.263  INFO 24308 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:31:16.523  WARN 24308 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:31:16.535  INFO 24308 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:31:16.535  INFO 24308 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2021-09-25 11:31:16.635  INFO 24308 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:31:16.636  INFO 24308 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:31:16.724  INFO 24308 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:31:17.292  INFO 24308 --- [redisson-netty-1-19] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:31:17.292  INFO 24308 --- [redisson-netty-1-12] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:31:17.497  INFO 24308 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:31:17.555  INFO 24308 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:31:18.050  INFO 24308 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:31:18.080  INFO 24308 --- [cluster-ClusterId{value='614e980675f7d55053b07471', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:23}] to 192.168.2.11:27017
+2021-09-25 11:31:18.080  INFO 24308 --- [cluster-rtt-ClusterId{value='614e980675f7d55053b07471', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:24}] to 192.168.2.11:27017
+2021-09-25 11:31:18.080  INFO 24308 --- [cluster-ClusterId{value='614e980675f7d55053b07471', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10883000}
+2021-09-25 11:31:18.962  INFO 24308 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:31:19.012  INFO 24308 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:31:19.016  INFO 24308 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:31:19.019  INFO 24308 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:31:19.035  INFO 24308 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:31:19.062  INFO 24308 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:31:19.075  INFO 24308 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.956 seconds (JVM running for 4.558)
+2021-09-25 11:31:19.559  INFO 24308 --- [RMI TCP Connection(3)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:31:19.820  INFO 24308 --- [RMI TCP Connection(5)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:31:19.820  INFO 24308 --- [RMI TCP Connection(5)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:31:19.821  INFO 24308 --- [RMI TCP Connection(5)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:31:23.570  WARN 24308 --- [RMI TCP Connection(3)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 51 common frames omitted
+
+2021-09-25 11:31:23.688  INFO 24308 --- [RMI TCP Connection(3)-192.168.2.145] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:25}] to 192.168.2.11:27017
+2021-09-25 11:41:36.980  INFO 848 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 848 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:41:36.983  INFO 848 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:41:37.578  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:41:37.578  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:41:37.590  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:41:37.595  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:41:37.595  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:41:37.605  INFO 848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:41:37.750  INFO 848 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:41:37.763  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:41:37.764  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:41:37.764  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:41:37.765  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:41:37.765  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:41:37.765  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:41:37.765  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:41:37.765  INFO 848 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:41:37.792  INFO 848 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:41:38.049  WARN 848 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:41:38.060  INFO 848 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:41:38.060  INFO 848 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1044 ms
+2021-09-25 11:41:38.157  INFO 848 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:41:38.159  INFO 848 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:41:38.245  INFO 848 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:41:38.793  INFO 848 --- [redisson-netty-1-13] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:41:38.793  INFO 848 --- [redisson-netty-1-11] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:41:38.991  INFO 848 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:41:39.051  INFO 848 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:41:39.540  INFO 848 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:41:39.569  INFO 848 --- [cluster-ClusterId{value='614e9a73e3e0dd0477fa47f6', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:28}] to 192.168.2.11:27017
+2021-09-25 11:41:39.569  INFO 848 --- [cluster-rtt-ClusterId{value='614e9a73e3e0dd0477fa47f6', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:29}] to 192.168.2.11:27017
+2021-09-25 11:41:39.569  INFO 848 --- [cluster-ClusterId{value='614e9a73e3e0dd0477fa47f6', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10835800}
+2021-09-25 11:41:40.499  INFO 848 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:41:40.551  INFO 848 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:41:40.555  INFO 848 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:41:40.558  INFO 848 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:41:40.574  INFO 848 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:41:40.601  INFO 848 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:41:40.614  INFO 848 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.948 seconds (JVM running for 4.543)
+2021-09-25 11:41:40.844  INFO 848 --- [RMI TCP Connection(1)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:41:40.844  INFO 848 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:41:40.846  INFO 848 --- [RMI TCP Connection(1)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-25 11:41:41.111  INFO 848 --- [RMI TCP Connection(3)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:41:45.118  WARN 848 --- [RMI TCP Connection(3)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 11:41:45.234  INFO 848 --- [RMI TCP Connection(3)-192.168.2.145] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:30}] to 192.168.2.11:27017
+2021-09-25 11:43:36.048  INFO 18076 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 18076 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:43:36.050  INFO 18076 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:43:36.632  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:43:36.632  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:43:36.643  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:43:36.648  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:43:36.649  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:43:36.658  INFO 18076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:43:36.802  INFO 18076 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:43:36.815  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:43:36.816  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:43:36.816  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:43:36.817  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:43:36.817  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:43:36.817  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:43:36.818  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:43:36.818  INFO 18076 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:43:36.845  INFO 18076 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:43:37.089  WARN 18076 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:43:37.100  INFO 18076 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:43:37.101  INFO 18076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1017 ms
+2021-09-25 11:43:37.198  INFO 18076 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:43:37.200  INFO 18076 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:43:37.286  INFO 18076 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:43:37.839  INFO 18076 --- [redisson-netty-1-16] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:43:37.839  INFO 18076 --- [redisson-netty-1-17] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:43:38.044  INFO 18076 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:43:38.102  INFO 18076 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:43:38.586  INFO 18076 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:43:38.615  INFO 18076 --- [cluster-ClusterId{value='614e9aeae1dafc0fef88132e', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:34}] to 192.168.2.11:27017
+2021-09-25 11:43:38.615  INFO 18076 --- [cluster-rtt-ClusterId{value='614e9aeae1dafc0fef88132e', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:35}] to 192.168.2.11:27017
+2021-09-25 11:43:38.615  INFO 18076 --- [cluster-ClusterId{value='614e9aeae1dafc0fef88132e', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11520900}
+2021-09-25 11:43:39.523  INFO 18076 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:43:39.575  INFO 18076 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:43:39.579  INFO 18076 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:43:39.582  INFO 18076 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:43:39.599  INFO 18076 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:43:39.625  INFO 18076 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:43:39.639  INFO 18076 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 3.912 seconds (JVM running for 4.497)
+2021-09-25 11:43:40.188  INFO 18076 --- [RMI TCP Connection(3)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:43:40.189  INFO 18076 --- [RMI TCP Connection(4)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:43:40.190  INFO 18076 --- [RMI TCP Connection(4)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:43:40.191  INFO 18076 --- [RMI TCP Connection(4)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:43:44.197  WARN 18076 --- [RMI TCP Connection(3)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 51 common frames omitted
+
+2021-09-25 11:43:44.320  INFO 18076 --- [RMI TCP Connection(3)-192.168.2.145] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:36}] to 192.168.2.11:27017
+2021-09-25 11:49:03.412  INFO 12460 --- [main] c.f.springdemo.SpringDemoApplication     : Starting SpringDemoApplication using Java 1.8.0_241 on Timothy with PID 12460 (E:\workspaces\self_open\springdemo\target\classes started by 郭志峰 in E:\workspaces\self_open\springdemo)
+2021-09-25 11:49:03.415  INFO 12460 --- [main] c.f.springdemo.SpringDemoApplication     : The following profiles are active: dev
+2021-09-25 11:49:04.030  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:49:04.030  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-09-25 11:49:04.042  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 MongoDB repository interfaces.
+2021-09-25 11:49:04.047  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-25 11:49:04.048  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-25 11:49:04.058  INFO 12460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2021-09-25 11:49:04.209  INFO 12460 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-09-25 11:49:04.223  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-09-25 11:49:04.223  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:49:04.224  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:49:04.224  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:49:04.224  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-09-25 11:49:04.224  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-09-25 11:49:04.225  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:49:04.225  INFO 12460 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-09-25 11:49:04.255  INFO 12460 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-09-25 11:49:04.519  WARN 12460 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-09-25 11:49:04.532  INFO 12460 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-09-25 11:49:04.532  INFO 12460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1082 ms
+2021-09-25 11:49:04.634  INFO 12460 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-09-25 11:49:04.636  INFO 12460 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-09-25 11:49:04.726  INFO 12460 --- [main] org.redisson.Version                     : Redisson 3.10.5
+2021-09-25 11:49:05.294  INFO 12460 --- [redisson-netty-1-19] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:49:05.294  INFO 12460 --- [redisson-netty-1-16] o.r.c.pool.MasterConnectionPool          : 8 connections initialized for 192.168.2.11/192.168.2.11:6444
+2021-09-25 11:49:05.496  INFO 12460 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-09-25 11:49:05.554  INFO 12460 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-25 11:49:06.043  INFO 12460 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[192.168.2.11:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-09-25 11:49:06.071  INFO 12460 --- [cluster-rtt-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:38}] to 192.168.2.11:27017
+2021-09-25 11:49:06.071  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:37}] to 192.168.2.11:27017
+2021-09-25 11:49:06.072  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10503600}
+2021-09-25 11:49:06.478  INFO 12460 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:39}] to 192.168.2.11:27017
+2021-09-25 11:49:07.775  INFO 12460 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2021-09-25 11:49:07.826  INFO 12460 --- [main] io.undertow                              : starting server: Undertow - 2.2.8.Final
+2021-09-25 11:49:07.830  INFO 12460 --- [main] org.xnio                                 : XNIO version 3.8.0.Final
+2021-09-25 11:49:07.833  INFO 12460 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.0.Final
+2021-09-25 11:49:07.849  INFO 12460 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2021-09-25 11:49:07.875  INFO 12460 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 80 (http)
+2021-09-25 11:49:07.889  INFO 12460 --- [main] c.f.springdemo.SpringDemoApplication     : Started SpringDemoApplication in 4.8 seconds (JVM running for 5.393)
+2021-09-25 11:49:08.418  INFO 12460 --- [RMI TCP Connection(1)-192.168.2.145] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2021-09-25 11:49:08.419  INFO 12460 --- [RMI TCP Connection(2)-192.168.2.145] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-25 11:49:08.419  INFO 12460 --- [RMI TCP Connection(2)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-25 11:49:08.420  INFO 12460 --- [RMI TCP Connection(2)-192.168.2.145] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-25 11:49:12.424  WARN 12460 --- [RMI TCP Connection(1)-192.168.2.145] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:724)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:216)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2167)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2140)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2120)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1220)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1170)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565)
+	... 50 common frames omitted
+
+2021-09-25 14:17:25.431  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 192.168.2.11:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:630)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:515)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:315)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:215)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	... 5 common frames omitted
+
+2021-09-25 14:17:25.434  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:41}] to 192.168.2.11:27017
+2021-09-25 14:17:25.434  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1982900}
+2021-09-25 14:17:30.792  INFO 12460 --- [cluster-rtt-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:42}] to 192.168.2.11:27017
+2021-09-25 16:45:08.957  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 192.168.2.11:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:630)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:515)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:315)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:215)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	... 5 common frames omitted
+
+2021-09-25 16:45:08.961  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:44}] to 192.168.2.11:27017
+2021-09-25 16:45:08.961  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2048400}
+2021-09-25 16:45:17.100  INFO 12460 --- [cluster-rtt-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:45}] to 192.168.2.11:27017
+2021-09-25 18:13:07.795  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 192.168.2.11:27017
+
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:630)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:515)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:355)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:315)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:215)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:109)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:131)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:647)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:512)
+	... 5 common frames omitted
+
+2021-09-25 18:13:07.797  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:8, serverValue:47}] to 192.168.2.11:27017
+2021-09-25 18:13:07.797  INFO 12460 --- [cluster-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=192.168.2.11:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1273400}
+2021-09-25 18:13:13.309  INFO 12460 --- [cluster-rtt-ClusterId{value='614e9c32aeb2ad3f5610cdd1', description='null'}-192.168.2.11:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:48}] to 192.168.2.11:27017

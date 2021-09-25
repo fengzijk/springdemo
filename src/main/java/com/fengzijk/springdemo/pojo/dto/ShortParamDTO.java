@@ -1,4 +1,4 @@
-package com.fengzijk.springdemo.entity.dto;
+package com.fengzijk.springdemo.pojo.dto;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
