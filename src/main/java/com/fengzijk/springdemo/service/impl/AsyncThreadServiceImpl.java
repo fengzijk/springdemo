@@ -44,17 +44,24 @@ public class AsyncThreadServiceImpl {
         List<CompletableFuture<Void>> itemFutureList = new ArrayList<>();
 
         paramList.forEach(a -> {
+            try {
+                semaphore.acquire();
+                itemFutureList.add(
+                  CompletableFuture.runAsync(() -> {
 
-                  itemFutureList.add(
-                    CompletableFuture.runAsync(() -> {
+                      System.out.println(a+"--------"+Thread.currentThread().getName());
+                      semaphore.release();
 
-                        System.out.println(a+"--------"+Thread.currentThread().getName());
-                        semaphore.release();
+                  }, executor));
 
-                    }, executor));
-              });
+        } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
+        });
         CompletableFuture.allOf(itemFutureList.toArray(new CompletableFuture[0])).join();
+
+
     }
 
 
