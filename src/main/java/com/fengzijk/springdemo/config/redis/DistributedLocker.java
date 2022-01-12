@@ -60,8 +60,6 @@ public interface DistributedLocker {
      * @param unit    时间单位（建议不要太长）
      * @param timeout 超时释放时间
      * @return RLock  返回 com.fengzijk.redisson.redlock对象
-     * @description :
-     * @methodName :
      * @author : fengzijk
      * @date : 2019/4/24 14:04
      */

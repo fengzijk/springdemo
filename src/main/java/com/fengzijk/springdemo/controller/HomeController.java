@@ -4,20 +4,20 @@ import com.fengzijk.springdemo.config.model.ResponseEntity;
 import com.fengzijk.springdemo.config.redis.RedisQueueHandle;
 import com.fengzijk.springdemo.config.redis.RedisUtil;
 import com.fengzijk.springdemo.config.redis.RedissonLockUtil;
+import com.fengzijk.springdemo.pojo.dto.ShortParamDTO;
 import com.fengzijk.springdemo.pojo.entity.IpWhiteListEntity;
 import com.fengzijk.springdemo.pojo.entity.ShortParamEntity;
-import com.fengzijk.springdemo.pojo.dto.ShortParamDTO;
 import com.fengzijk.springdemo.service.IShortParamService;
 import com.fengzijk.springdemo.service.IpWhiteListService;
+import com.fengzijk.springdemo.service.impl.AsyncThreadServiceImpl;
 import com.fengzijk.springdemo.util.modelmapper.ModelMapperUtil;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping(value = "/")
@@ -35,6 +35,9 @@ public class HomeController {
     @Autowired
     private RedisQueueHandle redisQueueHandle;
 
+    @Autowired
+
+    private AsyncThreadServiceImpl asyncThreadService;
 
 
     /**
@@ -65,4 +68,12 @@ public class HomeController {
         return new ResponseEntity<ShortParamDTO>().ok().setdata(map);
     }
 
+    /**
+     * index
+     */
+    @GetMapping("/test")
+    public ResponseEntity<String> testShort() {
+asyncThreadService.test();
+        return new ResponseEntity<String>().ok().setdata("su");
+    }
 }

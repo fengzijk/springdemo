@@ -3,6 +3,7 @@ package com.fengzijk.springdemo.service.impl;
 import com.fengzijk.springdemo.service.IMongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 
@@ -20,5 +21,18 @@ public class MongoServiceImpl implements IMongoService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
+    public void testSave() {
+        // 保存
+
+
+        this.test();
+        //
+        System.out.println(11111);
+    }
+
+    @Async
+    public void test() {
+        System.out.println("uibu");
+    }
 
 }

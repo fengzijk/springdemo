@@ -14,7 +14,7 @@ import lombok.Getter;
  * @date : 2021/7/10 上午2:00
  * --------------------------------------------------
  */
-@SuppressWarnings("All")
+
 public class ResponseEntity<T> {
     /**
      * 响应状态码

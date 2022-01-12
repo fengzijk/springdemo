@@ -13,7 +13,6 @@ spring:
     active: @env@
 
 mybatis-plus:
-
   # 配置扫描xml
   mapper-locations:
     - classpath:mapper/*.xml
