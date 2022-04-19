@@ -1,5 +1,6 @@
 package com.fengzijk.springdemo.controller;
 
+
 import com.fengzijk.springdemo.config.model.ResponseEntity;
 import com.fengzijk.springdemo.config.redis.RedisQueueHandle;
 import com.fengzijk.springdemo.config.redis.RedisUtil;
@@ -42,14 +43,12 @@ public class HomeController {
      */
     @GetMapping("/index")
     public ResponseEntity<List<IpWhiteListEntity>> index() {
-        redisUtil.set("xxx", "hhhhhhhhhhhhh");
+
 
         List<IpWhiteListEntity> lists = whiteListService.get();
         RedissonLockUtil.lock("gzf", TimeUnit.SECONDS, 100);
 
         redisQueueHandle.put("gzf", "test");
-        System.out.println(1111);
-        RedissonLockUtil.unlock("gzf");
         return new ResponseEntity<List<IpWhiteListEntity>>().ok().setdata(lists);
     }
     /**

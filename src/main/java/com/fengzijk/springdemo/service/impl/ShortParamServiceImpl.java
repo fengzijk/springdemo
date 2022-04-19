@@ -3,7 +3,7 @@ package com.fengzijk.springdemo.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fengzijk.springdemo.config.constant.BaseConstant;
+import com.fengzijk.springdemo.common.constant.BaseConstant;
 import com.fengzijk.springdemo.config.redis.RedisUtil;
 import com.fengzijk.springdemo.entity.ShortParamEntity;
 import com.fengzijk.springdemo.mapper.ShortParamMapper;
@@ -28,6 +28,7 @@ import java.util.concurrent.TimeUnit;
  * @date : 2021/8/9 下午7:04
  * --------------------------------------------------
  */
+
 @Service
 public class ShortParamServiceImpl extends ServiceImpl<ShortParamMapper, ShortParamEntity> implements IShortParamService {
 

@@ -1,5 +1,6 @@
 package com.fengzijk.springdemo.controller;
 
+
 import com.fengzijk.springdemo.config.model.ResponseEntity;
 import com.fengzijk.springdemo.config.redis.RedisQueueHandle;
 import com.fengzijk.springdemo.service.IpWhiteListService;
@@ -17,10 +18,10 @@ public class MqController {
 
     @Autowired
     private RedisQueueHandle redisQueueHandle;
+
+
     @GetMapping("/redis/")
     public ResponseEntity<String> index() {
-
-
         redisQueueHandle.put("gzf", "test");
         System.out.println(1111);
         return new ResponseEntity<String>().ok();

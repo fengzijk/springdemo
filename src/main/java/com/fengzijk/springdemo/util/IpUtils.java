@@ -150,11 +150,11 @@ public   class IpUtils {
 
     public static byte[] getIpV4Bytes(String ipOrMask) {
         try {
-            String[] addrs = ipOrMask.split("\\.");
-            int length = addrs.length;
+            String[] address = ipOrMask.split("\\.");
+            int length = address.length;
             byte[] addr = new byte[length];
             for (int index = 0; index < length; index++) {
-                addr[index] = (byte) (Integer.parseInt(addrs[index]) & 0xff);
+                addr[index] = (byte) (Integer.parseInt(address[index]) & 0xff);
             }
             return addr;
         } catch (Exception e) {
@@ -163,6 +163,7 @@ public   class IpUtils {
     }
 
     public static void main(String[] args) {
+        System.out.println();
         System.out.println( ipExistsInRange("202.81.231.222","202.131.48.0-202.131.63.255"));
         System.out.println( ipExistsInRange("43.243.222.241","43.243.220.0-43.243.227.255"));
     }

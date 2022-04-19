@@ -1,4 +1,4 @@
-package com.fengzijk.springdemo.config.constant;
+package com.fengzijk.springdemo.common.constant;
 /**
 *-------------------------------------------------
 * <pre>基础常量</pre>

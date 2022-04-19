@@ -7,7 +7,6 @@ import com.fengzijk.springdemo.entity.ShortParamEntity;
  * <pre>短连接或者参数缩短</pre>
  *
  * @author : fengzijk
- * @className : IShortParamService
  * @email: guozhifengvip@gmail.com
  * @date : 2021/8/9 下午6:54
  * --------------------------------------------------
@@ -23,7 +22,15 @@ public interface IShortParamService {
      */
     Boolean isExistByMd5Code(String md5Code);
 
-
+    /**
+     * <pre>功能描述</pre>
+     *
+     * @param type
+     * @param param
+     * @return com.fengzijk.springdemo.entity.ShortParamEntity
+     * @author : fengzijk
+     * @date : 2022/4/9 02:31
+     */
     ShortParamEntity longToShort(String type, String param);
 
     String shortToLong(String shortParam);
