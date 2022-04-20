@@ -237,7 +237,7 @@ public class ResponseEntity<T> {
         /**
          * 系统内部错误
          **/
-        SYSTEM_ERROR("205", "系统内部错误");
+        SYSTEM_ERROR("400", "系统内部错误");
 
         private final String code;
         private final String message;
