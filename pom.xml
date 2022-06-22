@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~   All rights Reserved, Designed By ZTE-ITS
-  ~   Copyright:    Copyright(C) 2019-2025
-  ~   Company       FENGZIJK LTD.
-  ~   @Author:    fengzijk
-  ~   @Email: guozhifengvip@163.com
-  ~   @Version    V1.0
-  ~   @Date:   2022年06月22日 21时31分
-  ~   Modification       History:
-  ~   ------------------------------------------------------------------------------------
-  ~   Date                  Author        Version        Description
-  ~   -----------------------------------------------------------------------------------
-  ~  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
-  ~
-  ~
-  -->
 
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
