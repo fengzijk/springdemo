@@ -5,23 +5,23 @@
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@163.com
  *   @Version    V1.0
- *   @Date:   2019年04月24日 15时01分
+ *   @Date:   2022年06月22日 21时31分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
- *   Date                  Author        Version        Discription
+ *   Date                  Author        Version        Description
  *   -----------------------------------------------------------------------------------
- *  2019-04-24 15:01:35    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
  */
 
 package com.fengzijk.springdemo.config.redis;
 
 /**
- * -------------------------------------------------
  * @Descprition : RedisKeyBuilder 统一自定义生成redisKey
  * @Author : fengzijk
  * @email: guozhifengvip@163.com
  * @Time : 2019/3/23 13:41
- * --------------------------------------------------
  */
 public class RedisKeyBuilder {
     /**

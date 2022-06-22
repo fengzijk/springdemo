@@ -16,12 +16,15 @@ import org.springframework.stereotype.Component;
 
 */
 /**
- * -------------------------------------------------
  * <pre>mq 发送消息</pre>
  *
  * @author : guozhifeng
  * @date : 2021/7/18 10:45
- * --------------------------------------------------
+ * <p>
+ * <p>
+ * 对外发送消息的方法
+ * @param message 具体的消息内容
+ * @param properties 额外的附加属性
  *//*
 
 @Component
@@ -34,11 +37,11 @@ public class RabbitProviderSender {
 
     */
 /**
-     * 对外发送消息的方法
-     *
-     * @param message 具体的消息内容
-     * @param properties 额外的附加属性
-     *//*
+ * 对外发送消息的方法
+ *
+ * @param message 具体的消息内容
+ * @param properties 额外的附加属性
+ *//*
 
     public void send(Object message, Map<String, Object> properties) {
 

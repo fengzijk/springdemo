@@ -1,3 +1,20 @@
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
+
 package com.fengzijk.springdemo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -9,24 +26,21 @@ import com.fengzijk.springdemo.entity.ShortParamEntity;
 import com.fengzijk.springdemo.mapper.ShortParamMapper;
 import com.fengzijk.springdemo.service.IShortParamService;
 import com.fengzijk.springdemo.util.ShortUtils;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 /**
- * -------------------------------------------------
  * <pre>段参数与短链接</pre>
  *
  * @author : fengzijk
  * @className : ShortParamService
  * @email: guozhifengvip@gmail.com
  * @date : 2021/8/9 下午7:04
- * --------------------------------------------------
  */
 
 @Service
@@ -69,7 +83,7 @@ public class ShortParamServiceImpl extends ServiceImpl<ShortParamMapper, ShortPa
             redisKey = BaseConstant.REDIS_SHORT_URL_KEY + md5Code;
         }
         if (redisUtil.existsKey(redisKey)) {
-            return (ShortParamEntity)redisUtil.get(redisKey);
+            return (ShortParamEntity) redisUtil.get(redisKey);
         }
 
 
@@ -77,7 +91,7 @@ public class ShortParamServiceImpl extends ServiceImpl<ShortParamMapper, ShortPa
                 .setShortParam(shortParam)
                 .setOriginalParam(param)
                 .setMd5Code(md5Code)
-                .setRedirectUrl(domain+param);
+                .setRedirectUrl(domain + param);
         int count = baseMapper.insert(shortParamEntity);
         if (count > 0) {
             redisUtil.setForTimeCustom(redisKey, shortParamEntity, 24, TimeUnit.HOURS);

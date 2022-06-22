@@ -1,14 +1,30 @@
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
+
 package com.fengzijk.springdemo.util;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
-import javax.servlet.http.HttpServletRequest;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 @Slf4j
-public   class IpUtils {
+public class IpUtils {
 
     /**
      * 获取IP地址
@@ -38,7 +54,7 @@ public   class IpUtils {
             if (StringUtils.isEmpty(ip) || "unknown".equalsIgnoreCase(ip)) {
                 ip = request.getRemoteAddr();
             }
-            if(StringUtils.isNotBlank(ip)){
+            if (StringUtils.isNotBlank(ip)) {
                 ip = ip.split(",")[0];
             }
         } catch (Exception e) {
@@ -164,7 +180,7 @@ public   class IpUtils {
 
     public static void main(String[] args) {
         System.out.println();
-        System.out.println( ipExistsInRange("202.81.231.222","202.131.48.0-202.131.63.255"));
-        System.out.println( ipExistsInRange("43.243.222.241","43.243.220.0-43.243.227.255"));
+        System.out.println(ipExistsInRange("202.81.231.222", "202.131.48.0-202.131.63.255"));
+        System.out.println(ipExistsInRange("43.243.222.241", "43.243.220.0-43.243.227.255"));
     }
 }

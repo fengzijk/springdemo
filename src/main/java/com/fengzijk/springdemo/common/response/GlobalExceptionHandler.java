@@ -1,16 +1,16 @@
 /*
  *   All rights Reserved, Designed By ZTE-ITS
- *   Copyright:    Copyright(C) 2021-2025
+r *   Copyright:    Copyright(C) 2019-2025
  *   Company       FENGZIJK LTD.
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@163.com
  *   @Version    V1.0
- *   @Date:   2021年10月04日 00时27分
+ *   @Date:   2022年06月22日 21时31分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
- *   Date                  Author        Version        Discription
+ *   Date                  Author        Version        Description
  *   -----------------------------------------------------------------------------------
- *  2021-10-04 00:27:27    fengzijk         1.0         Why & What is modified: 改原因描述>
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
  *
  *
  */
@@ -21,6 +21,9 @@ package com.fengzijk.springdemo.common.response;
 import com.fengzijk.springdemo.common.annotation.IgnoreGlobalResponse;
 import com.fengzijk.springdemo.common.exception.BusinessException;
 import com.fengzijk.springdemo.util.JsonUtil;
+import java.util.List;
+import java.util.Objects;
+import javax.xml.bind.ValidationException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,17 +46,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-import javax.xml.bind.ValidationException;
-import java.util.List;
-import java.util.Objects;
-
 /**
- * -------------------------------------------------
  * <pre>全局异常处理</pre>
  *
  * @author : fengzijk
  * @date : 2021/10/3 19:15
- * --------------------------------------------------
  */
 @SuppressWarnings("NullableProblems")
 @RestControllerAdvice

@@ -18,8 +18,9 @@ spring:
   #redis 配置
   redis:
     host: 192.168.2.11
-    port: 6444
+    port: 6379
     timeout: 3000ms
+    password: 123456
     database: 0
     jedis:
       pool:

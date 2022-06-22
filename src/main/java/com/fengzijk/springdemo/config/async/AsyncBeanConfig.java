@@ -1,39 +1,36 @@
 /*
  *   All rights Reserved, Designed By ZTE-ITS
  *   Copyright:    Copyright(C) 2019-2025
- *   Company       JKHH120 LTD.
+ *   Company       FENGZIJK LTD.
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@163.com
  *   @Version    V1.0
- *   @Date:   2019年07月19日 14时03分
+ *   @Date:   2022年06月22日 21时31分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
- *   Date                  Author        Version        Discription
+ *   Date                  Author        Version        Description
  *   -----------------------------------------------------------------------------------
- *  2019-07-19 14:03:54    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
  *
  *
  */
 
 package com.fengzijk.springdemo.config.async;
 
+import java.util.concurrent.ThreadPoolExecutor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import java.util.concurrent.ThreadPoolExecutor;
-
 /**
- * -------------------------------------------------
  * <pre>功能描述:</pre>
  *
  * @author : fengzijk
  * @className : AsyncBeanConfig
  * @email: guozhifengvip@gmail.com
  * @date : 2019/6/25 11:51
- * --------------------------------------------------
  */
 @Configuration
 @EnableAsync

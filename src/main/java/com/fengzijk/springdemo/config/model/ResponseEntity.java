@@ -1,3 +1,20 @@
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
+
 package com.fengzijk.springdemo.config.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -5,14 +22,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * -------------------------------------------------
  * <pre>功能描述:</pre>
  *
  * @author : fengzijk
  * @className : ResponseEntity
  * @email: guozhifengvip@gmail.com
  * @date : 2021/7/10 上午2:00
- * --------------------------------------------------
  */
 @SuppressWarnings("All")
 public class ResponseEntity<T> {
@@ -52,6 +67,32 @@ public class ResponseEntity<T> {
         this.statusCode = statusCode;
         this.statusMessage = statusMessage;
         this.data = data;
+    }
+
+    /**
+     * 判断 是否调用成功
+     *
+     * @param responseEntity
+     * @return
+     */
+    public static <T> boolean hasSuccessResponse(ResponseEntity<T> responseEntity) {
+        if (responseEntity != null && responseEntity.isOk()) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 判断 是否存在调用成功的响应内容
+     *
+     * @param responseEntity
+     * @return
+     */
+    public static <T> boolean hasSuccessdata(ResponseEntity<T> responseEntity) {
+        if (hasSuccessResponse(responseEntity) && responseEntity.getdata() != null) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -157,7 +198,6 @@ public class ResponseEntity<T> {
         return new ResponseEntity<T>(failStatusCode.getCode(), message);
     }
 
-
     /**
      * 是否成功
      *
@@ -188,7 +228,6 @@ public class ResponseEntity<T> {
         return this;
     }
 
-
     /**
      * 获取状态码
      *
@@ -206,7 +245,6 @@ public class ResponseEntity<T> {
     public String getMessage() {
         return statusMessage;
     }
-
 
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
@@ -242,33 +280,6 @@ public class ResponseEntity<T> {
         private final String code;
         private final String message;
 
-    }
-
-
-    /**
-     * 判断 是否调用成功
-     *
-     * @param responseEntity
-     * @return
-     */
-    public static <T> boolean hasSuccessResponse(ResponseEntity<T> responseEntity) {
-        if (responseEntity != null && responseEntity.isOk()) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * 判断 是否存在调用成功的响应内容
-     *
-     * @param responseEntity
-     * @return
-     */
-    public static <T> boolean hasSuccessdata(ResponseEntity<T> responseEntity) {
-        if (hasSuccessResponse(responseEntity) && responseEntity.getdata() != null) {
-            return true;
-        }
-        return false;
     }
 
 

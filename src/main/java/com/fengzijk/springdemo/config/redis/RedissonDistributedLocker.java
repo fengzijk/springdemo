@@ -6,30 +6,28 @@
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@163.com
  *   @Version    V1.0
- *   @Date:   2019年04月24日 15时01分
+ *   @Date:   2022年06月22日 21时31分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
- *   Date                  Author        Version        Discription
+ *   Date                  Author        Version        Description
  *   -----------------------------------------------------------------------------------
- *  2019-04-24 15:01:03    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
  */
 
 package com.fengzijk.springdemo.config.redis;
 
 
+import java.util.concurrent.TimeUnit;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 
-import java.util.concurrent.TimeUnit;
-
 /**
- * -------------------------------------------------
- *
  * @Descprition : redLock 实现类
  * @Author : fengzijk
  * @email: guozhifengvip@163.com
  * @Time : 2019/3/23 10:55
- * --------------------------------------------------
  */
 public class RedissonDistributedLocker implements DistributedLocker {
     private RedissonClient redissonClient;

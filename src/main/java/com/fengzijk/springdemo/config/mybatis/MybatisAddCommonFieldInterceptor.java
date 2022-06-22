@@ -21,14 +21,34 @@ import java.util.concurrent.atomic.AtomicReference;
 
 */
 /**
- * -------------------------------------------------
- *
  * <pre>
  * 拦截所有执行的SQL，进行必要字段的数据填充
  * </pre>
  *
  * @author : guozhifeng
- * @date : 2021/8/3 11:32 --------------------------------------------------
+ * @date : 2021/8/3 11:32
+ * <p>
+ * 创建人
+ * <p>
+ * 修改人
+ * <p>
+ * 设置拼接 用户id和管理员id值
+ * @param sqlCommandType
+ * @param object
+ * @param userId
+ * @throws java.lang.Exception
+ * <p>
+ * 通过反射动态设置属性和值
+ * @param object
+ * @param declaredField
+ * @param value
+ * @throws java.lang.Exception
+ * <p>
+ * 参数为Map类型时，mybatis-plus 转换参数为et-entity 设置用户id和管理员id
+ * @param sqlCommandType Sql 类型
+ * @param object         或得到的对象
+ * @param userId         用户Id
+ * @throws java.lang.Exception
  *//*
 
 @Intercepts({@Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})})
@@ -39,15 +59,15 @@ public class MybatisAddCommonFieldInterceptor implements Interceptor {
 
     */
 /**
-     * 创建人
-     *//*
+ * 创建人
+ *//*
 
     private static final String CREATE_ID = "createId";
 
     */
 /**
-     * 修改人
-     *//*
+ * 修改人
+ *//*
 
     private static final String UPDATE_ID = "updateId";
 
@@ -91,13 +111,13 @@ public class MybatisAddCommonFieldInterceptor implements Interceptor {
 
     */
 /**
-     * 设置拼接 用户id和管理员id值
-     *
-     * @param sqlCommandType
-     * @param object
-     * @param userId
-     * @throws Exception
-     *//*
+ * 设置拼接 用户id和管理员id值
+ *
+ * @param sqlCommandType
+ * @param object
+ * @param userId
+ * @throws java.lang.Exception
+ *//*
 
     private void setColumn(SqlCommandType sqlCommandType, Object object, Long userId) throws Exception {
         // 如果是 SELECT 操作直接返回
@@ -122,13 +142,13 @@ public class MybatisAddCommonFieldInterceptor implements Interceptor {
 
     */
 /**
-     * 通过反射动态设置属性和值
-     *
-     * @param object
-     * @param declaredField
-     * @param value
-     * @throws Exception
-     *//*
+ * 通过反射动态设置属性和值
+ *
+ * @param object
+ * @param declaredField
+ * @param value
+ * @throws java.lang.Exception
+ *//*
 
     private void setFieldVal(Object object, String declaredField, Object value) throws Exception {
         Field field;
@@ -173,13 +193,13 @@ public class MybatisAddCommonFieldInterceptor implements Interceptor {
 
     */
 /**
-     * 参数为Map类型时，mybatis-plus 转换参数为et-entity 设置用户id和管理员id
-     *
-     * @param sqlCommandType Sql 类型
-     * @param object         或得到的对象
-     * @param userId         用户Id
-     * @throws Exception
-     *//*
+ * 参数为Map类型时，mybatis-plus 转换参数为et-entity 设置用户id和管理员id
+ *
+ * @param sqlCommandType Sql 类型
+ * @param object         或得到的对象
+ * @param userId         用户Id
+ * @throws java.lang.Exception
+ *//*
 
     @SuppressWarnings("rawtypes")
     private void handleParamMap(SqlCommandType sqlCommandType, Object object, Long userId) throws Exception {

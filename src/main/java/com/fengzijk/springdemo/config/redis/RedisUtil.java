@@ -2,16 +2,16 @@
 /*
  *   All rights Reserved, Designed By ZTE-ITS
  *   Copyright:    Copyright(C) 2019-2025
- *   Company       JKHH120 LTD.
+ *   Company       FENGZIJK LTD.
  *   @Author:    fengzijk
  *   @Email: guozhifengvip@163.com
  *   @Version    V1.0
- *   @Date:   2019年07月19日 15时32分
+ *   @Date:   2022年06月22日 21时31分
  *   Modification       History:
  *   ------------------------------------------------------------------------------------
- *   Date                  Author        Version        Discription
+ *   Date                  Author        Version        Description
  *   -----------------------------------------------------------------------------------
- *  2019-07-19 15:32:48    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
  *
  *
  */
@@ -19,26 +19,23 @@
 package com.fengzijk.springdemo.config.redis;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
-import org.springframework.stereotype.Component;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
+import org.springframework.stereotype.Component;
 
 /**
- * -------------------------------------------------
  * Redis 工具类
  *
  * @author : fengzijk
  * @className : RedisUtil
  * @email: guozhifengvip@gmail.com
  * @date : 2019/5/18 14:23
- * --------------------------------------------------
  */
 @Component
 @SuppressWarnings("All")

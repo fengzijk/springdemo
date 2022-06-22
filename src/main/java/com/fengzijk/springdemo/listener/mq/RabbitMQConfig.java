@@ -11,12 +11,10 @@ import org.springframework.context.annotation.Bean;
 
 */
 /**
- * -------------------------------------------------
  * <pre>rabbit序列化</pre>
  *
  * @author : guozhifeng
  * @date : 2021/7/18 11:17
- * --------------------------------------------------
  *//*
 
 //@Configuration

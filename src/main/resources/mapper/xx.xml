@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~   All rights Reserved, Designed By ZTE-ITS
+  ~   Copyright:    Copyright(C) 2019-2025
+  ~   Company       FENGZIJK LTD.
+  ~   @Author:    fengzijk
+  ~   @Email: guozhifengvip@163.com
+  ~   @Version    V1.0
+  ~   @Date:   2022年06月22日 21时31分
+  ~   Modification       History:
+  ~   ------------------------------------------------------------------------------------
+  ~   Date                  Author        Version        Description
+  ~   -----------------------------------------------------------------------------------
+  ~  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+  ~
+  ~
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fengzijk.springdemo.mapper.IpWhiteListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap"
+               type="com.fengzijk.springdemo.entity.IpWhiteListEntity">
+        <id column="id" property="id"/>
+        <result column="start_ip" property="startIp"/>
+        <result column="end_ip" property="endIp"/>
+        <result column="state" property="state"/>
+        <result column="type" property="type"/>
+        <result column="create_id" property="createId"/>
+        <result column="update_id" property="updateId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 新增或更新 -->
+    <insert id="saveOrUpdate">
+        INSERT INTO ip_white_list
+            (type, start_ip, end_ip, state, create_id, update_id)
+        VALUES (#{type}, #{startIp}, #{endIp}, #{state}, #{createId}, #{updateId}) ON DUPLICATE KEY
+        UPDATE
+            type=#{type},
+            update_time=now()
+    </insert>
+
+</mapper>

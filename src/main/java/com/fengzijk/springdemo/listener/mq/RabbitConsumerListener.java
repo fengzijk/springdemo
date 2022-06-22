@@ -9,12 +9,13 @@ import org.springframework.messaging.Message;
 
 */
 /**
- * -------------------------------------------------
  * <pre>Rabbit 消息接收处理</pre>
  *
  * @author : guozhifeng
  * @date : 2021/7/18 10:31
- * --------------------------------------------------
+ *
+ *
+ * <pre>组合监听</pre>
  *//*
 
 //@Component很反感
@@ -23,8 +24,8 @@ public class RabbitConsumerListener {
 
     */
 /**
-     * <pre>组合监听</pre>
-     *//*
+ * <pre>组合监听</pre>
+ *//*
 
    // @RabbitListener(bindings = @QueueBinding(value = @Queue(value = "queue-1", durable = "true"),exchange = @Exchange(name = "exchange-1",type = "topic",ignoreDeclarationExceptions = "true"),key = "springboot.*"))
     //@RabbitHandler

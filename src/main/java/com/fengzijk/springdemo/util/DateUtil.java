@@ -1,8 +1,27 @@
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
+
 package com.fengzijk.springdemo.util;
 
-import org.apache.commons.lang3.StringUtils;
-
-import java.time.*;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
@@ -10,6 +29,7 @@ import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 public class DateUtil {
 
     public static final String DATE_TIME_PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
@@ -190,7 +210,6 @@ public class DateUtil {
     }
 
 
-
     /**
      * <pre>计算两个时间相差分钟数/pre>
      * @param startTime start time
@@ -206,7 +225,6 @@ public class DateUtil {
         long minutes = duration.toMinutes();
         return minutes;
     }
-
 
 
     /**
@@ -227,8 +245,8 @@ public class DateUtil {
 
     public static void main(String[] args) throws InterruptedException {
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime endTime1 =  LocalDateTime.parse("2019-12-12 19:56:01",df);
-        LocalDateTime endTime2 =  LocalDateTime.parse("2019-12-11 19:48:19",df);
+        LocalDateTime endTime1 = LocalDateTime.parse("2019-12-12 19:56:01", df);
+        LocalDateTime endTime2 = LocalDateTime.parse("2019-12-11 19:48:19", df);
         System.out.println(DateUtil.getCurrentDateTimeMisStr());
     }
 
@@ -259,9 +277,10 @@ public class DateUtil {
 
     /**
      * 获取当前时间戳-毫秒
+     *
      * @return 交接
      */
-    public static String getCurrentDateTimeMisStr(){
+    public static String getCurrentDateTimeMisStr() {
         DateTimeFormatter df = DateTimeFormatter.ofPattern(DATE_PATTERN_YYYYMMDDHHMMSSSSS);
         LocalDateTime time = LocalDateTime.now();
         return df.format(time);
@@ -269,25 +288,26 @@ public class DateUtil {
 
     /**
      * 获取给定时间段数组
+     *
      * @param startTime
      * @param endTime
      * @return [2019-08-01,2019-08-02,2019-08-03...]
      */
-    public static List<String> getDateStrList(LocalDateTime startTime, LocalDateTime endTime){
+    public static List<String> getDateStrList(LocalDateTime startTime, LocalDateTime endTime) {
         Boolean flag = true;
         List<String> result = new ArrayList<>();
         LocalDateTime tmp = startTime;
-        if(startTime.compareTo(endTime)>-1){
-            result.add(DateUtil.time2FormatString(endTime,DateUtil.DATE_PATTERN));
+        if (startTime.compareTo(endTime) > -1) {
+            result.add(DateUtil.time2FormatString(endTime, DateUtil.DATE_PATTERN));
             return result;
         }
-        while(flag){
-            if(DateUtil.time2FormatString(tmp,DateUtil.DATE_PATTERN).equals(DateUtil.time2FormatString(endTime,DateUtil.DATE_PATTERN))){
-                flag=false;
-                result.add(DateUtil.time2FormatString(tmp,DateUtil.DATE_PATTERN));
-            }else{
-                result.add(DateUtil.time2FormatString(tmp,DateUtil.DATE_PATTERN));
-                tmp=DateUtil.getTimeAddition(tmp,1, ChronoUnit.DAYS);
+        while (flag) {
+            if (DateUtil.time2FormatString(tmp, DateUtil.DATE_PATTERN).equals(DateUtil.time2FormatString(endTime, DateUtil.DATE_PATTERN))) {
+                flag = false;
+                result.add(DateUtil.time2FormatString(tmp, DateUtil.DATE_PATTERN));
+            } else {
+                result.add(DateUtil.time2FormatString(tmp, DateUtil.DATE_PATTERN));
+                tmp = DateUtil.getTimeAddition(tmp, 1, ChronoUnit.DAYS);
             }
         }
         return result;

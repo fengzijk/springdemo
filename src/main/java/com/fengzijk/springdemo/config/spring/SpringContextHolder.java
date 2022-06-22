@@ -1,26 +1,35 @@
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
+
 package com.fengzijk.springdemo.config.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+
 /**
-*-------------------------------------------------
-* <pre>spring获取容器对象</pre>
-* @className  : SpringContextHolder
-* @author : fengzijk
-* @email: guozhifengvip@gmail.com
-* @date : 2021/8/9 下午5:51
-*--------------------------------------------------
-*/
+ * <pre>spring获取容器对象</pre>
+ *
+ * @author : fengzijk
+ * @className : SpringContextHolder
+ * @email: guozhifengvip@gmail.com
+ * @date : 2021/8/9 下午5:51
+ */
 public class SpringContextHolder implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
-
-    /**
-     * 实现ApplicationContextAware接口的context注入函数, 将其存入静态变量.
-     */
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) {
-        SpringContextHolder.applicationContext = applicationContext;
-    }
 
     /**
      * 取得存储在静态变量中的ApplicationContext.
@@ -28,6 +37,14 @@ public class SpringContextHolder implements ApplicationContextAware {
     public static ApplicationContext getApplicationContext() {
         checkApplicationContext();
         return applicationContext;
+    }
+
+    /**
+     * 实现ApplicationContextAware接口的context注入函数, 将其存入静态变量.
+     */
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) {
+        SpringContextHolder.applicationContext = applicationContext;
     }
 
     /**

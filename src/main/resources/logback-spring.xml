@@ -1,3 +1,20 @@
+<!--
+  ~   All rights Reserved, Designed By ZTE-ITS
+  ~   Copyright:    Copyright(C) 2019-2025
+  ~   Company       FENGZIJK LTD.
+  ~   @Author:    fengzijk
+  ~   @Email: guozhifengvip@163.com
+  ~   @Version    V1.0
+  ~   @Date:   2022年06月22日 21时31分
+  ~   Modification       History:
+  ~   ------------------------------------------------------------------------------------
+  ~   Date                  Author        Version        Description
+  ~   -----------------------------------------------------------------------------------
+  ~  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+  ~
+  ~
+  -->
+
 <configuration scan="true" scanPeriod="10 seconds">
     <!--    项目路径 -->
     <property name="APPDIR" value="@pom.artifactId@"/>
@@ -8,11 +25,13 @@
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%black(${APPDIR}) %red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{36}) - %cyan(%msg%n)</pattern>
+            <pattern>%black(${APPDIR}) %red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%thread]) %highlight(%-5level)
+                %boldMagenta(%logger{36}) - %cyan(%msg%n)
+            </pattern>
         </layout>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-        <!-- 设置过滤级别 -->
-        <level>DEBUG</level>
+            <!-- 设置过滤级别 -->
+            <level>DEBUG</level>
         </filter>
     </appender>
 
@@ -95,7 +114,6 @@
     </appender>
 
 
-
     <appender name="TASK_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- filter是appender的过滤器，包括：
             1. LevelFilter：级别过滤器，只输出指定级别日志信息。
@@ -141,6 +159,6 @@
         <appender-ref ref="TASK_FILE"/>
     </root>
     <logger name="com.jkhh.activity.service.sale.impl.SettlementTaskServiceImpl" level="INFO" additivity="false">
-        <appender-ref ref="TASK_FILE" />
+        <appender-ref ref="TASK_FILE"/>
     </logger>
 </configuration>

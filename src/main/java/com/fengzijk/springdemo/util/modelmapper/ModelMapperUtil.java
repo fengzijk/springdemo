@@ -1,11 +1,27 @@
-package com.fengzijk.springdemo.util.modelmapper;
+/*
+ *   All rights Reserved, Designed By ZTE-ITS
+ *   Copyright:    Copyright(C) 2019-2025
+ *   Company       FENGZIJK LTD.
+ *   @Author:    fengzijk
+ *   @Email: guozhifengvip@163.com
+ *   @Version    V1.0
+ *   @Date:   2022年06月22日 21时31分
+ *   Modification       History:
+ *   ------------------------------------------------------------------------------------
+ *   Date                  Author        Version        Description
+ *   -----------------------------------------------------------------------------------
+ *  2022-06-22 21:31:04    fengzijk         1.0         Why & What is modified: <修改原因描述>
+ *
+ *
+ */
 
-import org.modelmapper.ModelMapper;
-import org.springframework.stereotype.Component;
+package com.fengzijk.springdemo.util.modelmapper;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
 @Component
 public class ModelMapperUtil {
@@ -29,7 +45,7 @@ public class ModelMapperUtil {
      * 集合转换
      *
      * @param entityList 原始集合
-     * @param d   目标集合类
+     * @param d          目标集合类
      * @param <D>
      * @param <T>
      * @return 目标类型的集合
