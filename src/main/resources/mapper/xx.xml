@@ -17,6 +17,12 @@
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
+    <sql id="Base_Column_List">
+        id, type ,start_ip as startIp ,end_ip as endIp , state, type ,create_id as createId ,update_id  as updateId
+    </sql>
+
+
+
     <!-- 新增或更新 -->
     <insert id="saveOrUpdate">
         INSERT INTO ip_white_list
@@ -27,4 +33,11 @@
             update_time=now()
     </insert>
 
+    <!-- 根据ID 查询 -->
+    <select id="selectByxxId" resultType="com.fengzijk.springdemo.entity.IpWhiteListEntity" flushCache="true">
+        select
+        <include refid="Base_Column_List"/>
+        from ip_white_list
+        where id = #{id}
+    </select>
 </mapper>

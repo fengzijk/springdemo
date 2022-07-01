@@ -21,6 +21,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * <pre>功能描述:</pre>
@@ -32,6 +33,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @MapperScan("com.fengzijk.springdemo.mapper")
 @EnableScheduling
+@EnableTransactionManagement
 public class SpringDemoApplication {
 
     public static void main(String[] args) {

@@ -19,6 +19,7 @@ package com.fengzijk.springdemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.fengzijk.springdemo.entity.IpWhiteListEntity;
+import org.apache.ibatis.annotations.Options;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -32,4 +33,7 @@ import org.springframework.stereotype.Repository;
 public interface IpWhiteListMapper extends BaseMapper<IpWhiteListEntity> {
 
     int saveOrUpdate(IpWhiteListEntity entity);
+
+   //@Options(flushCache=Options.FlushCachePolicy.TRUE)
+    IpWhiteListEntity selectByxxId(Long id);
 }

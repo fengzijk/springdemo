@@ -143,7 +143,4 @@
         <appender-ref ref="ERROR_FILE"/>
         <appender-ref ref="TASK_FILE"/>
     </root>
-    <logger name="com.jkhh.activity.service.sale.impl.SettlementTaskServiceImpl" level="INFO" additivity="false">
-        <appender-ref ref="TASK_FILE"/>
-    </logger>
 </configuration>

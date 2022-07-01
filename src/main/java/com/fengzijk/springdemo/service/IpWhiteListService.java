@@ -33,4 +33,10 @@ public interface IpWhiteListService extends IService<IpWhiteListEntity> {
      * @date : 2022/6/21 22:45
      */
     int saveOrUpdate1(IpWhiteListEntity entity);
+
+    int testSaveSleep(IpWhiteListEntity entity);
+
+    IpWhiteListEntity selectone();
+
+
 }
