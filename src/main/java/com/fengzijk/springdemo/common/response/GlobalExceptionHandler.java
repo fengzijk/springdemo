@@ -49,8 +49,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 /**
  * <pre>全局异常处理</pre>
  *
- * @author : fengzijk
- * @date : 2021/10/3 19:15
+ * @author fengzijk
+ * @date 2021/10/3 19:15
  */
 @SuppressWarnings("NullableProblems")
 @RestControllerAdvice
@@ -67,8 +67,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:21
+     * @author fengzijk
+     * @date 2021/10/4 2:21
      */
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public ResponseResult<?> methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e) {
@@ -89,8 +89,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:22
+     * @author fengzijk
+     * @date 2021/10/4 2:22
      */
     @ExceptionHandler(value = BindException.class)
     public ResponseResult<?> bindExceptionHandler(BindException e) {
@@ -111,8 +111,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return java.lang.Object
-     * @author : fengzijk
-     * @date : 2021/10/4 4:04
+     * @author fengzijk
+     * @date 2021/10/4 4:04
      */
     @ExceptionHandler(NoHandlerFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
@@ -126,8 +126,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:22
+     * @author fengzijk
+     * @date 2021/10/4 2:22
      */
     @ExceptionHandler(value = ValidationException.class)
     public ResponseResult<?> validationExceptionHandler(ValidationException e) {
@@ -141,8 +141,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:20
+     * @author fengzijk
+     * @date 2021/10/4 2:20
      */
     @ExceptionHandler(value = {HttpRequestMethodNotSupportedException.class, HttpMediaTypeNotSupportedException.class})
     public ResponseResult<?> httpRequestMethodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException e) {
@@ -156,8 +156,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:23
+     * @author fengzijk
+     * @date 2021/10/4 2:23
      */
     @ExceptionHandler(value = MissingServletRequestParameterException.class)
     public ResponseResult<?> missingServletRequestParameterExceptionHandler(MissingServletRequestParameterException e) {
@@ -172,8 +172,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param e 错误信息
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<?>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:20
+     * @author fengzijk
+     * @date 2021/10/4 2:20
      */
     @ExceptionHandler(value = BusinessException.class)
     public ResponseResult<?> daoExceptionHandler(BusinessException e) {
@@ -213,8 +213,8 @@ public class GlobalExceptionHandler implements ResponseBodyAdvice<Object> {
      *
      * @param methodParameter 方法参数
      * @return java.lang.Boolean
-     * @author : fengzijk
-     * @date : 2021/10/4 0:30
+     * @author fengzijk
+     * @date 2021/10/4 0:30
      */
     private Boolean filter(MethodParameter methodParameter) {
         Class<?> declaringClass = methodParameter.getDeclaringClass();

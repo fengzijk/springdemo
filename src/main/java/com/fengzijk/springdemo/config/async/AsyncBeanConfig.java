@@ -27,10 +27,10 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 /**
  * <pre>功能描述:</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : AsyncBeanConfig
  * @email: guozhifengvip@gmail.com
- * @date : 2019/6/25 11:51
+ * @date 2019/6/25 11:51
  */
 @Configuration
 @EnableAsync

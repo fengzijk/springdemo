@@ -24,8 +24,8 @@ import lombok.experimental.Accessors;
 /**
  * <pre>统一返回结果</pre>
  *
- * @author : fengzijk
- * @date : 2021/10/4 1:01
+ * @author fengzijk
+ * @date 2021/10/4 1:01
  */
 
 @Data
@@ -44,8 +44,8 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param data 数据
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:08
+     * @author fengzijk
+     * @date 2021/10/4 2:08
      */
     public static <T> ResponseResult<T> success(T data) {
         return new ResponseResult<T>()
@@ -59,8 +59,8 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param data 数据
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:11
+     * @author fengzijk
+     * @date 2021/10/4 2:11
      */
     public static <T> ResponseResult<T> fail(T data, ResponseStatusEnum responseStatusEnum) {
         return new ResponseResult<T>()
@@ -74,8 +74,8 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param responseStatusEnum 数据
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:11
+     * @author fengzijk
+     * @date 2021/10/4 2:11
      */
     public static <T> ResponseResult<T> fail(ResponseStatusEnum responseStatusEnum) {
         return new ResponseResult<T>()
@@ -102,8 +102,8 @@ public class ResponseResult<T> implements Serializable {
      * 返回失败数据
      *
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:11
+     * @author fengzijk
+     * @date 2021/10/4 2:11
      */
 
     /**
@@ -111,8 +111,8 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param data 数据
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:11
+     * @author fengzijk
+     * @date 2021/10/4 2:11
      */
     public static <T> ResponseResult<T> fail(T data) {
         return new ResponseResult<T>()
@@ -126,8 +126,8 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param result 返回结果
      * @return com.fengzijk.springdemo.config.webconfig.response.ResponseResult<T>
-     * @author : fengzijk
-     * @date : 2021/10/4 2:13
+     * @author fengzijk
+     * @date 2021/10/4 2:13
      */
     public static <T> ResponseResult<T> result(T result) {
         if (result instanceof Boolean && (Boolean) result) {

@@ -24,8 +24,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * <pre>全局返回值与异常处理</pre>
  *
- * @author : fengzijk
- * @date : 2021/10/4 0:47
+ * @author fengzijk
+ * @date 2021/10/4 0:47
  */
 @ConfigurationProperties(GlobalResponseProperties.PREFIX)
 public class GlobalResponseProperties {

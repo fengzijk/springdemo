@@ -37,10 +37,10 @@ import org.springframework.stereotype.Service;
 /**
  * <pre>段参数与短链接</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : ShortParamService
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午7:04
+ * @date 2021/8/9 下午7:04
  */
 
 @Service

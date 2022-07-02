@@ -24,10 +24,10 @@ import lombok.Getter;
 /**
  * <pre>功能描述:</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : ResponseEntity
  * @email: guozhifengvip@gmail.com
- * @date : 2021/7/10 上午2:00
+ * @date 2021/7/10 上午2:00
  */
 @SuppressWarnings("All")
 public class ResponseEntity<T> {

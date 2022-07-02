@@ -25,8 +25,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * 拦截所有执行的SQL，进行必要字段的数据填充
  * </pre>
  *
- * @author : guozhifeng
- * @date : 2021/8/3 11:32
+ * @author guozhifeng
+ * @date 2021/8/3 11:32
  * <p>
  * 创建人
  * <p>

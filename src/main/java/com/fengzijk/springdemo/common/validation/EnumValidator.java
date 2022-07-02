@@ -29,8 +29,8 @@ import org.apache.commons.lang3.StringUtils;
  * 自定义枚举校验处理类
  * </pre>
  *
- * @author : guozhifeng
- * @date : 2022/6/17 10:47
+ * @author guozhifeng
+ * @date 2022/6/17 10:47
  */
 public class EnumValidator implements ConstraintValidator<EnumValid, String> {
 

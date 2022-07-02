@@ -22,9 +22,9 @@ import com.fengzijk.springdemo.entity.ShortParamEntity;
 /**
  * <pre>短连接或者参数缩短</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午6:54
+ * @date 2021/8/9 下午6:54
  */
 public interface IShortParamService {
 
@@ -33,7 +33,7 @@ public interface IShortParamService {
      *
      * @param md5Code MD5code
      * @return java.lang.Boolean
-     * @date : 2021/8/9 下午7:00
+     * @date 2021/8/9 下午7:00
      */
     Boolean isExistByMd5Code(String md5Code);
 
@@ -43,8 +43,8 @@ public interface IShortParamService {
      * @param type
      * @param param
      * @return com.fengzijk.springdemo.entity.ShortParamEntity
-     * @author : fengzijk
-     * @date : 2022/4/9 02:31
+     * @author fengzijk
+     * @date 2022/4/9 02:31
      */
     ShortParamEntity longToShort(String type, String param);
 

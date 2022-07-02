@@ -20,9 +20,9 @@ package com.fengzijk.springdemo.common.constant;
 /**
  * <pre>基础常量</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午7:34
+ * @date 2021/8/9 下午7:34
  */
 public interface BaseConstant {
 

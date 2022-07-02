@@ -11,8 +11,8 @@ import org.springframework.messaging.Message;
 /**
  * <pre>Rabbit 消息接收处理</pre>
  *
- * @author : guozhifeng
- * @date : 2021/7/18 10:31
+ * @author guozhifeng
+ * @date 2021/7/18 10:31
  *
  *
  * <pre>组合监听</pre>

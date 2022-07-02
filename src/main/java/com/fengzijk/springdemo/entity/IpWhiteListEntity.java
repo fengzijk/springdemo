@@ -28,10 +28,10 @@ import lombok.experimental.Accessors;
 /**
  * <pre>功能描述</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : IpWhiteList
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午5:57
+ * @date 2021/8/9 下午5:57
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

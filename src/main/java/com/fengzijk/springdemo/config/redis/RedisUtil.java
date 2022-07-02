@@ -32,10 +32,10 @@ import org.springframework.stereotype.Component;
 /**
  * Redis 工具类
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : RedisUtil
  * @email: guozhifengvip@gmail.com
- * @date : 2019/5/18 14:23
+ * @date 2019/5/18 14:23
  */
 @Component
 @SuppressWarnings("All")

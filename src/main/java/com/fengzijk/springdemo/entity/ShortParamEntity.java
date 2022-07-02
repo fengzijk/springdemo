@@ -30,9 +30,9 @@ import lombok.experimental.FieldNameConstants;
 /**
  * <pre>功能描述:</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午6:51
+ * @date 2021/8/9 下午6:51
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

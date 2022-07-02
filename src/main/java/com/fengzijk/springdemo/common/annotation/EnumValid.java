@@ -26,6 +26,12 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
+/**
+ * <pre>功能描述</pre>
+ *
+ * @author guozhifeng
+ * @date 2022/7/3 0:46
+ */
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {EnumValidator.class})

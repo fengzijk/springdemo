@@ -23,10 +23,10 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * <pre>spring获取容器对象</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : SpringContextHolder
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午5:51
+ * @date 2021/8/9 下午5:51
  */
 public class SpringContextHolder implements ApplicationContextAware {
     private static ApplicationContext applicationContext;

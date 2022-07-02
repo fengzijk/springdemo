@@ -31,8 +31,8 @@ import lombok.experimental.FieldNameConstants;
 /**
  * <pre>功能描述</pre>
  *
- * @author : guozhifeng
- * @date : 2022/7/2 7:22
+ * @author guozhifeng
+ * @date 2022/7/2 7:22
  */
 @EqualsAndHashCode(callSuper = true)
 @Data

@@ -22,11 +22,10 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
- * <pre>功能描述:</pre>
+ * <pre>功能描述</pre>
  *
- * @author : fengzijk
- * @email: guozhifengvip@gmail.com
- * @date : 2021/9/21 12:52 上午
+ * @author guozhifeng
+ * @date 2022/7/3 0:49
  */
 @Data
 @Accessors

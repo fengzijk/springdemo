@@ -27,10 +27,10 @@ import lombok.experimental.Accessors;
 /**
  * <pre>数据库基础字段</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : BaseEntity
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午5:56
+ * @date 2021/8/9 下午5:56
  */
 @Data
 @Accessors(chain = true)

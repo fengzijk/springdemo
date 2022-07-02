@@ -20,8 +20,8 @@ package com.fengzijk.springdemo.common.exception;
 /**
  * <pre>业务异常</pre>
  *
- * @author : fengzijk
- * @date : 2021/10/3 19:17
+ * @author fengzijk
+ * @date 2021/10/3 19:17
  */
 
 public class BusinessException extends RuntimeException {

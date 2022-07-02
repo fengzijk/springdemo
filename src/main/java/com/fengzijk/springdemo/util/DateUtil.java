@@ -43,8 +43,8 @@ public class DateUtil {
     /**
      * 获得当月最大时间 2019-04-30T23:59:59.999999999
      *
-     * @author : fengzijk
-     * @date : 2019/5/7 17:04
+     * @author fengzijk
+     * @date 2019/5/7 17:04
      */
     public static LocalDateTime getMounthEndTime() {
         Date date = new Date();
@@ -61,8 +61,8 @@ public class DateUtil {
     /**
      * 获得当月最小时间 2019-04-30 00:00:00
      *
-     * @author : fengzijk
-     * @date : 2019/5/7 17:04
+     * @author fengzijk
+     * @date 2019/5/7 17:04
      */
     public static LocalDateTime getMounthStartTime() {
         Date date = new Date();
@@ -74,8 +74,8 @@ public class DateUtil {
     /**
      * 获得当月最小时间 2019-04-30 00:00:00
      *
-     * @author : fengzijk
-     * @date : 2019/5/7 17:04
+     * @author fengzijk
+     * @date 2019/5/7 17:04
      */
     public static LocalDateTime getMounthStartTime(LocalDateTime localDateTime) {
         LocalDateTime startOfDay = localDateTime.with(LocalTime.MIN);
@@ -85,8 +85,8 @@ public class DateUtil {
     /**
      * 获得当天最小时间 2019-04-30 00:00:00
      *
-     * @author : fengzijk
-     * @date : 2019/5/7 17:04
+     * @author fengzijk
+     * @date 2019/5/7 17:04
      */
     public static LocalDateTime getDayStartTime(LocalDateTime localDateTime) {
         return localDateTime.with(LocalTime.MIN);

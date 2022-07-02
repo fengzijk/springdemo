@@ -23,10 +23,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 /**
  * <pre>功能描述:</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : MyWebAppConfigurer
  * @email: guozhifengvip@gmail.com
- * @date : 2019/9/27 13:46
+ * @date 2019/9/27 13:46
  */
 //@Configuration
 public class MyWebAppConfigurer extends WebMvcConfigurationSupport {

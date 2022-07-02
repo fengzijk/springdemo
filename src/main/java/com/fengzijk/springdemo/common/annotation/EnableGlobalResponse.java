@@ -29,8 +29,8 @@ import org.springframework.context.annotation.Import;
 /**
  * <pre>全局统一返回启用注解(作用于启动类上)</pre>
  *
- * @author : fengzijk
- * @date : 2021/10/4 0:22
+ * @author fengzijk
+ * @date 2021/10/4 0:22
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

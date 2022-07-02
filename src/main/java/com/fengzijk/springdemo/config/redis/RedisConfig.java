@@ -44,10 +44,10 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 /**
  * Redis 序列化配置
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : RedisConfig
  * @email: guozhifengvip@gmail.com
- * @date : 2019/5/17 9:34
+ * @date 2019/5/17 9:34
  */
 @Configuration
 public class RedisConfig {

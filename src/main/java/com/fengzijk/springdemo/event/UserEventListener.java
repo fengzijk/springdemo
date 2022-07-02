@@ -33,8 +33,8 @@ public class UserEventListener {
 //     * 监听用户浏览事件 如果服务者三小时内访问被指配求助的用户im 钉钉播报
 //     *
 //     * @param event 用户浏览事件
-//     * @author : guozhifeng
-//     * @date : 2021/10/14 9:22
+//     * @author guozhifeng
+//     * @date 2021/10/14 9:22
 //     */
 //    @Async
 //    @EventListener

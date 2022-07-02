@@ -31,8 +31,8 @@ import reactor.core.publisher.Mono;
 /**
  * <pre>Response响应工具类</pre>
  *
- * @author : guozhifeng
- * @date : 2021/10/7 11:53
+ * @author guozhifeng
+ * @date 2021/10/7 11:53
  */
 public class ResponseResultUtil {
 
@@ -45,8 +45,8 @@ public class ResponseResultUtil {
      * @param status      http状态码
      * @param value       响应内容
      * @throws IOException IOException
-     * @author : guozhifeng
-     * @date : 2021/10/7 11:52
+     * @author guozhifeng
+     * @date 2021/10/7 11:52
      */
     public static void responseWriter(HttpServletResponse response, String contentType,
                                       int status, Object value) throws IOException {
@@ -63,8 +63,8 @@ public class ResponseResultUtil {
      * @param status   http状态码
      * @param value    响应内容
      * @return reactor.core.publisher.Mono<java.lang.Void>
-     * @author : guozhifeng
-     * @date : 2021/10/7 11:52
+     * @author guozhifeng
+     * @date 2021/10/7 11:52
      */
     public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response,
                                                    HttpStatus status, Object value) {

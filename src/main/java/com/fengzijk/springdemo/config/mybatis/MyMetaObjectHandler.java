@@ -30,10 +30,10 @@ import org.springframework.stereotype.Component;
 /**
  * <pre>功能描述:</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : MyMetaObjectHandler
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午8:23
+ * @date 2021/8/9 下午8:23
  */
 @Slf4j
 @Component

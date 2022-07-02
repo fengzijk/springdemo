@@ -29,8 +29,8 @@ public interface IpWhiteListService extends IService<IpWhiteListEntity> {
      *
      * @param entity
      * @return int
-     * @author : guozhifeng
-     * @date : 2022/6/21 22:45
+     * @author guozhifeng
+     * @date 2022/6/21 22:45
      */
     int saveOrUpdate1(IpWhiteListEntity entity);
 

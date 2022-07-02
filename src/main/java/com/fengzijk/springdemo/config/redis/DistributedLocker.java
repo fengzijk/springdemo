@@ -34,8 +34,8 @@ public interface DistributedLocker {
      *
      * @param lockKey redis的key
      * @return RLock  返回 com.fengzijk.redisson.redlock对象
-     * @author : fengzijk
-     * @date : 2019/4/24 13:52
+     * @author fengzijk
+     * @date 2019/4/24 13:52
      */
     RLock lock(String lockKey);
 
@@ -47,8 +47,8 @@ public interface DistributedLocker {
      * @return RLock  返回 com.fengzijk.redisson.redlock对象
      * @description : 带redisKey以及超时的锁
      * @methodName :lock
-     * @author : fengzijk
-     * @date : 2019/4/24 13:56
+     * @author fengzijk
+     * @date 2019/4/24 13:56
      */
     RLock lock(String lockKey, int timeout);
 
@@ -60,8 +60,8 @@ public interface DistributedLocker {
      * @return RLock  返回 com.fengzijk.redisson.redlock对象
      * @description :
      * @methodName :
-     * @author : fengzijk
-     * @date : 2019/4/24 14:04
+     * @author fengzijk
+     * @date 2019/4/24 14:04
      */
 
     RLock lock(String lockKey, TimeUnit unit, int timeout);
@@ -75,8 +75,8 @@ public interface DistributedLocker {
      * @param leaseTime 经过多久释放的数值
      * @return boolean 加锁是否成功
      * @methodName :tryLock
-     * @author : fengzijk
-     * @date : 2019/4/24 14:08
+     * @author fengzijk
+     * @date 2019/4/24 14:08
      */
     boolean tryLock(String lockKey, TimeUnit unit, int waitTime, int leaseTime);
 
@@ -85,8 +85,8 @@ public interface DistributedLocker {
      *
      * @param lockKey rediskey
      * @return void
-     * @author : fengzijk
-     * @date : 2019/4/24 14:37
+     * @author fengzijk
+     * @date 2019/4/24 14:37
      */
     void unlock(String lockKey);
 
@@ -95,8 +95,8 @@ public interface DistributedLocker {
      *
      * @param lock
      * @return void
-     * @author : fengzijk
-     * @date : 2019/4/24 14:44
+     * @author fengzijk
+     * @date 2019/4/24 14:44
      */
     void unlock(RLock lock);
 }

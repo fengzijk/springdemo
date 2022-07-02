@@ -27,10 +27,10 @@ import lombok.experimental.Accessors;
 /**
  * <pre>用户基础信息</pre>
  *
- * @author : fengzijk
+ * @author fengzijk
  * @className : BaseUserInfoDTO
  * @email: guozhifengvip@gmail.com
- * @date : 2021/8/9 下午6:02
+ * @date 2021/8/9 下午6:02
  */
 @Getter
 @Setter

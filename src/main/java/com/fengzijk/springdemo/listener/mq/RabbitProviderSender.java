@@ -18,8 +18,8 @@ import org.springframework.stereotype.Component;
 /**
  * <pre>mq 发送消息</pre>
  *
- * @author : guozhifeng
- * @date : 2021/7/18 10:45
+ * @author guozhifeng
+ * @date 2021/7/18 10:45
  * <p>
  * <p>
  * 对外发送消息的方法
