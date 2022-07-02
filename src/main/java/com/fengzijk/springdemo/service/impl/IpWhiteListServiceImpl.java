@@ -29,13 +29,11 @@ import com.fengzijk.springdemo.util.JsonUtil;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.executor.BaseExecutor;
 import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
@@ -51,7 +49,7 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
 
     @Override
     public List<IpWhiteListEntity> get() {
-        LambdaQueryWrapper<IpWhiteListEntity> lambda3 = Wrappers.<IpWhiteListEntity>lambdaQuery();
+        LambdaQueryWrapper<IpWhiteListEntity> lambda3 = Wrappers.lambdaQuery();
         lambda3.ne(IpWhiteListEntity::getCreateTime, LocalDateTime.now());
         return super.baseMapper.selectList(lambda3);
     }
@@ -59,8 +57,8 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
     @Override
     @Transactional(rollbackFor = Exception.class)
     public int saveOrUpdate1(IpWhiteListEntity entity) {
-         IpWhiteListEntity listEntity1 = super.baseMapper.selectById(12);
-         log.info("listEntity1================:{}", JsonUtil.tojson(listEntity1));
+        IpWhiteListEntity listEntity1 = super.baseMapper.selectById(12);
+        log.info("listEntity1================:{}", JsonUtil.tojson(listEntity1));
         try {
             TimeUnit.SECONDS.sleep(100);
         } catch (InterruptedException e) {
@@ -72,32 +70,39 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
     }
 
 
-
-
+    @SneakyThrows
     @Override
     @Transactional
     public IpWhiteListEntity selectone() {
         IpWhiteListEntity listEntity1 = listMapper.selectByxxId(25L);
-        log.info("listEntity1================:{}", JsonUtil.tojson(listEntity1));
-        try {
-            TimeUnit.SECONDS.sleep(10);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        log.info("1================:{}", JsonUtil.tojson(listEntity1));
+        TimeUnit.SECONDS.sleep(10);
+
         IpWhiteListEntity listEntity2 = listMapper.selectByxxId(25L);
-        log.info("listEntity111111================:{}", JsonUtil.tojson(listEntity2));
-
-
-        try {
-            TimeUnit.SECONDS.sleep(10);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        log.info("2================:{}", JsonUtil.tojson(listEntity2));
+        TimeUnit.SECONDS.sleep(10);
 
         IpWhiteListEntity listEntity3 = listMapper.selectByxxId(25L);
-        log.info("listEntity111111================:{}", JsonUtil.tojson(listEntity3));
+        log.info("3================:{}", JsonUtil.tojson(listEntity3));
         return listEntity1;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Override
     @Transactional(rollbackFor = Exception.class)
     public int testSaveSleep(IpWhiteListEntity entity) {
@@ -107,15 +112,15 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
             rLock.isLocked();
         }
         try {
-          listMapper.saveOrUpdate(entity);
-        }catch (Exception ignored){
+            listMapper.saveOrUpdate(entity);
+        } catch (Exception ignored) {
 
-        }finally {
-            eventPublisher.publishEvent(new UnLockRedissonEvent(this,rLock));
+        } finally {
+            eventPublisher.publishEvent(new UnLockRedissonEvent(this, rLock));
         }
 
 
-       log.info("事务：{}==={}", TransactionSynchronizationManager.isActualTransactionActive());
+        log.info("事务：{}==={}", TransactionSynchronizationManager.isActualTransactionActive());
 
         return 0;
     }
