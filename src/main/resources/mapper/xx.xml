@@ -19,6 +19,7 @@
 
     <sql id="Base_Column_List">
         id, type ,start_ip as startIp ,end_ip as endIp , state, type ,create_id as createId ,update_id  as updateId
+       ,create_time as  createTime ,update_time   AS updateTime
     </sql>
 
 

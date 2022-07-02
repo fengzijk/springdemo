@@ -20,6 +20,7 @@ package com.fengzijk.springdemo.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.fengzijk.springdemo.config.redis.RedisUtil;
 import com.fengzijk.springdemo.config.redis.RedissonLockUtil;
 import com.fengzijk.springdemo.entity.IpWhiteListEntity;
 import com.fengzijk.springdemo.event.UnLockRedissonEvent;
@@ -29,6 +30,7 @@ import com.fengzijk.springdemo.util.JsonUtil;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import javax.annotation.Resource;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
@@ -46,6 +48,9 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
 
     @Autowired
     private ApplicationEventPublisher eventPublisher;
+
+    @Resource
+    private RedisUtil  redisUtil;
 
     @Override
     public List<IpWhiteListEntity> get() {
@@ -75,16 +80,14 @@ public class IpWhiteListServiceImpl extends ServiceImpl<IpWhiteListMapper, IpWhi
     @Transactional
     public IpWhiteListEntity selectone() {
         IpWhiteListEntity listEntity1 = listMapper.selectByxxId(25L);
+
+        redisUtil.set("111",listEntity1);
         log.info("1================:{}", JsonUtil.tojson(listEntity1));
-        TimeUnit.SECONDS.sleep(10);
 
-        IpWhiteListEntity listEntity2 = listMapper.selectByxxId(25L);
-        log.info("2================:{}", JsonUtil.tojson(listEntity2));
-        TimeUnit.SECONDS.sleep(10);
+        IpWhiteListEntity ipWhiteListEntity =  redisUtil.get("111");
 
-        IpWhiteListEntity listEntity3 = listMapper.selectByxxId(25L);
-        log.info("3================:{}", JsonUtil.tojson(listEntity3));
-        return listEntity1;
+        log.info("redis:{}",ipWhiteListEntity);
+        return null;
     }
 
 

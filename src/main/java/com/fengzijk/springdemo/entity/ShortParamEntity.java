@@ -40,7 +40,8 @@ import lombok.experimental.FieldNameConstants;
 @FieldNameConstants
 @TableName("short_param_url")
 public class ShortParamEntity extends BaseEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 3441147299094477478L;
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
     private String md5Code;

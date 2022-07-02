@@ -24,7 +24,6 @@ import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-import lombok.experimental.FieldNameConstants;
 
 /**
  * <pre>功能描述</pre>
@@ -37,10 +36,10 @@ import lombok.experimental.FieldNameConstants;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Accessors(chain = true)
-@FieldNameConstants
 @TableName("ip_white_list")
 public class IpWhiteListEntity extends BaseEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 5145507171524347246L;
     /**
      * 主键
      */

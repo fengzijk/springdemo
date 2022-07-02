@@ -71,8 +71,8 @@ public class RedisUtil {
      * @param key
      * @return
      */
-    public Object get(String key) {
-        return (Object) redisTemplate.opsForValue().get(key);
+    public <T> T get(String key) {
+        return (T) redisTemplate.opsForValue().get(key);
     }
 
     public String getString(String key) {

@@ -17,6 +17,7 @@
 
 package com.fengzijk.springdemo.entity.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,6 +38,7 @@ import lombok.experimental.Accessors;
 @ToString
 public class BaseUserInfoDTO implements Serializable {
 
+    @JsonIgnore
     private Long userId;
     private Long userName;
 }
