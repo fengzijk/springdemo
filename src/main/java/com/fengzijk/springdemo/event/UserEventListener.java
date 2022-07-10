@@ -29,25 +29,6 @@ import org.springframework.transaction.event.TransactionalEventListener;
 @Slf4j
 public class UserEventListener {
 
-//    /**
-//     * 监听用户浏览事件 如果服务者三小时内访问被指配求助的用户im 钉钉播报
-//     *
-//     * @param event 用户浏览事件
-//     * @author guozhifeng
-//     * @date 2021/10/14 9:22
-//     */
-//    @Async
-//    @EventListener
-//    public void userVisitorImUserCustomerRequestDingTalk(UnLockRedissonEvent event) {
-//        if (Objects.isNull(event) || Objects.isNull(event.getLock())) {
-//            return;
-//        }
-//
-//        log.info("解锁 线程id:{},名称：{},锁:{},herad:{}", Thread.currentThread().getId(), Thread.currentThread().getName(), event.getLock().getName(), event.getLock().isHeldByCurrentThread());
-//        event.getLock().unlock();
-//
-//    }
-
     @TransactionalEventListener(phase =TransactionPhase.AFTER_COMPLETION)
     public void test1(UnLockRedissonEvent event) {
         if (Objects.isNull(event) || Objects.isNull(event.getLock())) {
